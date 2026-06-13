@@ -1,0 +1,59 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
+export const SERVICE_PAGES = [
+  { slug: "mudjacking", href: "/mudjacking", label: "Mudjacking" },
+  { slug: "foam-jacking", href: "/foam-jacking", label: "Foam/PolyJacking" },
+  { slug: "driveway-leveling", href: "/driveway-leveling", label: "Driveway Leveling" },
+  { slug: "sidewalk-repair", href: "/sidewalk-repair", label: "Sidewalk Repair" },
+  { slug: "patio-leveling", href: "/patio-leveling", label: "Patio Leveling" },
+  { slug: "garage-floor-leveling", href: "/garage-floor-leveling", label: "Garage Floor Leveling" },
+] as const;
+
+export function getRelatedServices(currentSlug: string, count = 2) {
+  return SERVICE_PAGES.filter((s) => s.slug !== currentSlug).slice(0, count);
+}
+
+type ServiceInternalLinksProps = {
+  currentSlug: string;
+};
+
+export function ServiceInternalLinks({ currentSlug }: ServiceInternalLinksProps) {
+  const related = getRelatedServices(currentSlug, 2);
+
+  return (
+    <section className="border-t border-primary/10 bg-neutral section-padding">
+      <div className="container-narrow mx-auto max-w-3xl">
+        <h2 className="font-display text-xl font-bold text-primary">Explore More</h2>
+        <ul className="mt-4 space-y-2 text-muted">
+          <li>
+            <Link href="/concrete-leveling-cost" className="inline-flex items-center gap-1 font-medium text-primary hover:underline">
+              See our cost guide
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" className="inline-flex items-center gap-1 font-medium text-primary hover:underline">
+              Get a free estimate
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </li>
+          <li>
+            <Link href="/areas-served" className="inline-flex items-center gap-1 font-medium text-primary hover:underline">
+              Areas we serve
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </li>
+          {related.map(({ href, label }) => (
+            <li key={href}>
+              <Link href={href} className="inline-flex items-center gap-1 font-medium text-primary hover:underline">
+                {label}
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
