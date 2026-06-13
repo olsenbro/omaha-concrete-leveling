@@ -14,8 +14,6 @@ export const metadata = buildPageMetadata({
   canonical: "/contact",
 });
 
-const CONTACT_EMAIL = "info@omahaconcretelveling.com";
-
 const trustPoints = [
   "Free written estimates",
   "No obligation",
@@ -92,11 +90,11 @@ export default function ContactPage() {
               <ul className="space-y-4">
                 <li>
                   <a
-                    href={`mailto:${CONTACT_EMAIL}`}
+                    href={`mailto:${siteConfig.email}`}
                     className="inline-flex items-center gap-3 text-dark transition-colors hover:text-primary"
                   >
                     <Mail className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
-                    {CONTACT_EMAIL}
+                    {siteConfig.email}
                   </a>
                 </li>
                 <li className="flex items-start gap-3 text-muted">

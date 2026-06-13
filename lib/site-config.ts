@@ -3,8 +3,8 @@ export const siteConfig = {
   tagline: "Professional Concrete Leveling & Mudjacking in Omaha, NE",
   description:
     "Trusted local experts for concrete leveling, mudjacking, and slab repair in Omaha, Nebraska. Free estimates, same-week service, and results that last.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://omaha-concrete-leveling.vercel.app",
-  schemaUrl: "https://omahaconcretelveling.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://omahaconcreteleveling.com",
+  schemaUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://omahaconcreteleveling.com",
   phone: "(402) 555-0190",
   phoneHref: "tel:+14025550190",
   email: "info@omahaconcreteleveling.com",
