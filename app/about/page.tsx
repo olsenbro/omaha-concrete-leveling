@@ -6,15 +6,15 @@ import { getWebPageSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata = createPageMetadata({
-  title: "About Us",
+  title: "About Omaha Mudjacking Pros",
   description:
-    "Learn about Omaha Concrete Leveling — locally owned mudjacking and concrete repair experts serving the greater Omaha metro area.",
+    "Learn about Omaha Mudjacking Pros — locally owned mudjacking and concrete repair experts serving the greater Omaha metro area.",
   path: "/about",
 });
 
 const pageSchema = getWebPageSchema(
   "/about",
-  "About Omaha Concrete Leveling",
+  "About Omaha Mudjacking Pros",
   "Locally owned concrete leveling experts serving Omaha, Nebraska.",
 );
 
@@ -41,7 +41,7 @@ export default function AboutPage() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
             <Image
               src="/images/concrete-work.jpg"
-              alt="Omaha Concrete Leveling crew at work"
+              alt="Omaha Mudjacking Pros crew at work"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

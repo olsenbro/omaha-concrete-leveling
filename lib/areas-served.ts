@@ -19,7 +19,7 @@ export const cityAreas: CityArea[] = [
     name: "Bellevue",
     state: "NE",
     stateName: "Nebraska",
-    title: "Concrete Leveling Bellevue NE | Mudjacking & Slab Repair",
+    title: "Mudjacking Bellevue NE | Concrete Leveling & Slab Repair",
     description:
       "Concrete leveling and mudjacking in Bellevue, Nebraska. Sunken driveways, sidewalks, and patios lifted fast. Free estimate — local Omaha metro experts.",
     h1: "Concrete Leveling in Bellevue, Nebraska",
@@ -40,7 +40,7 @@ export const cityAreas: CityArea[] = [
     name: "Papillion",
     state: "NE",
     stateName: "Nebraska",
-    title: "Concrete Leveling Papillion NE | Mudjacking Sarpy County",
+    title: "Mudjacking Papillion NE | Concrete Leveling Sarpy County",
     description:
       "Concrete leveling and mudjacking in Papillion, Nebraska. Sunken driveways, sidewalks, and patios in Sarpy County lifted fast. Free estimates from local experts.",
     h1: "Concrete Leveling in Papillion, Nebraska",
@@ -61,7 +61,7 @@ export const cityAreas: CityArea[] = [
     name: "Elkhorn",
     state: "NE",
     stateName: "Nebraska",
-    title: "Concrete Leveling Elkhorn NE | Driveway & Sidewalk Leveling",
+    title: "Mudjacking Elkhorn NE | Driveway & Sidewalk Leveling",
     description:
       "Concrete leveling in Elkhorn, Nebraska. Driveway, sidewalk, and patio mudjacking for upscale west Omaha neighborhoods. Free estimate — (402) 555-0190.",
     h1: "Concrete Leveling in Elkhorn, Nebraska",
@@ -82,7 +82,7 @@ export const cityAreas: CityArea[] = [
     name: "La Vista",
     state: "NE",
     stateName: "Nebraska",
-    title: "Concrete Leveling La Vista NE | Mudjacking & PolyJacking",
+    title: "Mudjacking La Vista NE | Concrete Leveling & PolyJacking",
     description:
       "Concrete leveling and mudjacking in La Vista, Nebraska. Sunken driveways, sidewalks, and patios repaired fast. HOA-friendly results. Free estimate.",
     h1: "Concrete Leveling in La Vista, Nebraska",
@@ -103,7 +103,7 @@ export const cityAreas: CityArea[] = [
     name: "Council Bluffs",
     state: "IA",
     stateName: "Iowa",
-    title: "Concrete Leveling Council Bluffs IA | Omaha Area Mudjacking",
+    title: "Mudjacking Council Bluffs IA | Omaha Area Concrete Leveling",
     description:
       "Concrete leveling and mudjacking in Council Bluffs, Iowa. We serve both Nebraska and Iowa across the Missouri River. Sunken driveways and sidewalks lifted fast. Free estimate.",
     h1: "Concrete Leveling in Council Bluffs, Iowa",

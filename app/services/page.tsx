@@ -5,7 +5,7 @@ import { getServiceSchema, getWebPageSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata = createPageMetadata({
-  title: "Concrete Leveling & Mudjacking Services",
+  title: "Mudjacking Omaha | Concrete Leveling Services",
   description:
     "Full-service concrete leveling, mudjacking, driveway repair, and commercial slab stabilization in Omaha, Nebraska.",
   path: "/services",
@@ -53,7 +53,7 @@ const services = [
 const pageSchema = [
   getWebPageSchema(
     "/services",
-    "Concrete Leveling & Mudjacking Services",
+    "Mudjacking Omaha | Concrete Leveling Services",
     "Full-service concrete leveling and mudjacking in Omaha, NE.",
   ),
   ...services.map((s) => getServiceSchema(s.name, s.description)),

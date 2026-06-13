@@ -47,11 +47,12 @@ export function Navigation() {
         <Link
           href="/"
           className="shrink-0 font-display text-lg font-bold leading-tight text-primary sm:text-xl"
+          aria-label="Omaha Mudjacking Pros home"
           onClick={() => setMobileOpen(false)}
         >
-          Omaha Concrete{" "}
+          Omaha Mudjacking{" "}
           <span className="relative inline-block">
-            Leveling
+            Pros
             <span
               className="absolute -bottom-0.5 left-0 h-0.5 w-full rounded-full bg-accent"
               aria-hidden="true"

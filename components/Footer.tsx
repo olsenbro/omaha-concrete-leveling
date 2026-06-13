@@ -16,10 +16,11 @@ export function Footer() {
           <Link
             href="/"
             className="inline-block font-display text-xl font-bold leading-tight text-white"
+            aria-label="Omaha Mudjacking Pros home"
           >
-            Omaha Concrete{" "}
+            Omaha Mudjacking{" "}
             <span className="relative inline-block">
-              Leveling
+              Pros
               <span
                 className="absolute -bottom-0.5 left-0 h-0.5 w-full rounded-full bg-accent"
                 aria-hidden="true"
@@ -82,7 +83,7 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container-narrow flex flex-col items-center justify-between gap-3 px-4 py-5 text-center text-sm text-white/60 sm:flex-row sm:px-6 lg:px-8">
-          <p>&copy; {year} Omaha Concrete Leveling</p>
+          <p>&copy; {year} Omaha Mudjacking Pros</p>
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy" className="transition-colors hover:text-white">
               Privacy Policy

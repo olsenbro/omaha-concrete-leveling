@@ -7,7 +7,7 @@ import {
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Driveway Leveling Omaha NE | Sunken Driveway Repair Without Replacement",
+  title: "Mudjacking Omaha | Driveway Leveling Without Replacement",
   description:
     "Sunken driveway in Omaha? We lift and level settled driveway slabs in hours — no tear-out, no mess. Save thousands vs. replacement. Free estimate.",
   canonical: "/driveway-leveling",

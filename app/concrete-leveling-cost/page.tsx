@@ -9,7 +9,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import { howToSchema } from "@/lib/schema";
 
 export const metadata = buildPageMetadata({
-  title: "Concrete Leveling Cost in Omaha NE | 2025 Mudjacking Price Guide",
+  title: "Mudjacking Omaha Cost Guide | 2025 Concrete Leveling Prices",
   description:
     "How much does concrete leveling cost in Omaha? Mudjacking runs $600–$2,500. Foam jacking $800–$3,000. Full guide with cost factors, comparisons, and free estimate.",
   canonical: "/concrete-leveling-cost",
@@ -117,7 +117,7 @@ export default function ConcreteLevelingCostPage() {
         ]}
         faqs={costFaqs}
         faqTitle="Concrete Leveling Cost FAQ"
-        ctaHeading="Get Your Free Omaha Concrete Leveling Estimate"
+        ctaHeading="Get Your Free Omaha Mudjacking Estimate"
         ctaBody="We'll assess your sunken concrete and provide a written quote — usually 50–70% less than replacement."
       >
         <ServiceSection title="Concrete Leveling Cost Summary — Omaha, NE">

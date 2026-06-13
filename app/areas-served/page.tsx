@@ -7,9 +7,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata = buildPageMetadata({
-  title: "Concrete Leveling Near Me | Omaha Metro Service Area",
+  title: "Mudjacking Omaha | Metro Service Areas",
   description:
-    "We provide concrete leveling and mudjacking throughout the Omaha metro — Douglas County, Sarpy County, and Council Bluffs, IA. See all service areas.",
+    "Omaha Mudjacking Pros provides concrete leveling and mudjacking throughout the Omaha metro — Douglas County, Sarpy County, and Council Bluffs, IA. See all service areas.",
   canonical: "/areas-served",
 });
 

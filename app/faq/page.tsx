@@ -10,9 +10,9 @@ import { faqSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata = buildPageMetadata({
-  title: "Concrete Leveling FAQs | Omaha Mudjacking Questions Answered",
+  title: "Mudjacking Omaha FAQs | Concrete Leveling Questions Answered",
   description:
-    "Everything you want to know about concrete leveling, mudjacking, and foam jacking in Omaha. Honest answers from local experts.",
+    "Everything you want to know about concrete leveling, mudjacking, and foam jacking in Omaha. Honest answers from Omaha Mudjacking Pros.",
   canonical: "/faq",
 });
 

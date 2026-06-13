@@ -8,7 +8,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata = buildPageMetadata({
-  title: "Get a Free Concrete Leveling Estimate | Omaha, NE",
+  title: "Mudjacking Omaha | Free Concrete Leveling Estimate",
   description:
     "Request a free concrete leveling estimate in Omaha. We'll assess your sunken driveway, sidewalk, or patio and give you an honest quote — usually same week.",
   canonical: "/contact",

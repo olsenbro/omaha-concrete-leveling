@@ -7,7 +7,7 @@ import {
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Patio Leveling Omaha NE | Sunken Patio & Pool Deck Repair",
+  title: "Mudjacking Omaha | Patio & Pool Deck Leveling",
   description:
     "Sunken patio or pool deck in Omaha? Mudjacking and foam jacking restore level surfaces without demolition. Fast, affordable. Free estimate.",
   canonical: "/patio-leveling",

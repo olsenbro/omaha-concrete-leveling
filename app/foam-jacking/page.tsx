@@ -7,7 +7,7 @@ import {
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Foam Jacking Omaha NE | PolyJacking & Polyurethane Lifting",
+  title: "Mudjacking Omaha | Foam Jacking & PolyJacking",
   description:
     "PolyJacking in Omaha — lightweight expanding foam lifts sunken concrete in minutes. Cures in 15 min, waterproof, and precise. Call for a free estimate.",
   canonical: "/foam-jacking",

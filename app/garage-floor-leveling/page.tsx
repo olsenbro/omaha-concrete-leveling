@@ -8,7 +8,7 @@ import {
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  title: "Garage Floor Leveling Omaha NE | Sunken Slab Repair",
+  title: "Mudjacking Omaha | Garage Floor Leveling & Slab Repair",
   description:
     "Sunken or uneven garage floor in Omaha? We lift and level settled garage slabs without full replacement. Call for a free estimate — (402) 555-0190.",
   canonical: "/garage-floor-leveling",
