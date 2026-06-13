@@ -63,7 +63,7 @@ export const cityAreas: CityArea[] = [
     stateName: "Nebraska",
     title: "Mudjacking Elkhorn NE | Driveway & Sidewalk Leveling",
     description:
-      "Concrete leveling in Elkhorn, Nebraska. Driveway, sidewalk, and patio mudjacking for upscale west Omaha neighborhoods. Free estimate — (402) 555-0190.",
+      "Concrete leveling in Elkhorn, Nebraska. Driveway, sidewalk, and patio mudjacking for upscale west Omaha neighborhoods. Free estimate — (402) 749-8050.",
     h1: "Concrete Leveling in Elkhorn, Nebraska",
     intro: [
       "Elkhorn's upscale neighborhoods feature larger homes, wider driveways, and tree-lined streets — and all three contribute to concrete settlement problems that are uniquely common in this part of the metro. From West Dodge corridor developments to the established streets near Elkhorn Ridge, we help homeowners restore level driveways, sidewalks, and patios without the cost and disruption of full replacement.",

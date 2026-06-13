@@ -54,7 +54,7 @@ const quoteSteps = [
   {
     title: "Request a free estimate",
     description:
-      "Call (402) 555-0190 or fill out our online contact form. Describe the sunken area and we'll schedule an on-site visit — usually within the same week.",
+      "Call (402) 749-8050 or fill out our online contact form. Describe the sunken area and we'll schedule an on-site visit — usually within the same week.",
   },
   {
     title: "Inspector assesses your slab",

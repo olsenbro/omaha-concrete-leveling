@@ -5,8 +5,8 @@ export const siteConfig = {
     "Trusted local experts for concrete leveling, mudjacking, and slab repair in Omaha, Nebraska. Free estimates, same-week service, and results that last.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://mudjackingomaha.com",
   schemaUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://mudjackingomaha.com",
-  phone: "(402) 555-0190",
-  phoneHref: "tel:+14025550190",
+  phone: "(402) 749-8050",
+  phoneHref: "tel:+14027498050",
   email: "info@mudjackingomaha.com",
   foundedYear: 2008,
   address: {

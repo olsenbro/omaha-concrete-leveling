@@ -8,7 +8,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata = buildPageMetadata({
   title: "Mudjacking Omaha | Sidewalk Leveling & Trip Hazard Repair",
   description:
-    "Uneven sidewalk in Omaha? We raise sunken concrete slabs and eliminate trip hazards fast. Avoid liability. City compliance. Free estimate — (402) 555-0190.",
+    "Uneven sidewalk in Omaha? We raise sunken concrete slabs and eliminate trip hazards fast. Avoid liability. City compliance. Free estimate — (402) 749-8050.",
   canonical: "/sidewalk-repair",
 });
 

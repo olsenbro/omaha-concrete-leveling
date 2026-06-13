@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata = buildPageMetadata({
   title: "Mudjacking Omaha NE | Concrete Leveling & PolyJacking Experts",
   description:
-    "Sunken driveway or sidewalk in Omaha? We level concrete fast — no replacement needed. Free estimates. Local experts serving Douglas & Sarpy County. Call (402) 555-0190.",
+    "Sunken driveway or sidewalk in Omaha? We level concrete fast — no replacement needed. Free estimates. Local experts serving Douglas & Sarpy County. Call (402) 749-8050.",
   canonical: "/",
 });
 
