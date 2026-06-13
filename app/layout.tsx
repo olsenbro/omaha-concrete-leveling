@@ -3,6 +3,7 @@ import { Inter, Montserrat } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 import { SchemaScript } from "@/components/SchemaScript";
+import { TrafficPixel } from "@/components/TrafficPixel";
 import { getWebSiteSchema, localBusinessSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
@@ -49,6 +50,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  verification: {
+    google: "prLNnUKjVXpOevhpQYzPhvPwGSaIKLRTi0i5khh3Ass",
+  },
 };
 
 export default function RootLayout({
@@ -63,6 +67,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <SchemaScript schema={JSON.parse(localBusinessSchema())} />
         <SchemaScript schema={getWebSiteSchema()} />
+        <TrafficPixel />
       </head>
       <body className="flex min-h-screen flex-col">
         {/* Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 measurement ID */}

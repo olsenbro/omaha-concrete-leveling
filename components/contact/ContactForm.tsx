@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { PhoneLink } from "@/components/PhoneLink";
 
 const projectTypes = [
@@ -32,11 +32,29 @@ const inputClassName =
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [sessionId, setSessionId] = useState("");
+
+  useEffect(() => {
+    try {
+      setSessionId(sessionStorage.getItem("_sid") || "");
+    } catch {
+      // sessionStorage unavailable
+    }
+  }, []);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const form = event.currentTarget;
+    try {
+      const sid = sessionStorage.getItem("_sid") || "";
+      setSessionId(sid);
+      const sessionInput = form.elements.namedItem("session_id") as HTMLInputElement | null;
+      if (sessionInput) sessionInput.value = sid;
+    } catch {
+      // sessionStorage unavailable
+    }
+
     const data = Object.fromEntries(new FormData(form).entries());
 
     // TODO: Replace with Formspree, Resend, or API route for real lead delivery
@@ -71,6 +89,7 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="rounded-xl bg-white p-8 shadow-sm">
+      <input type="hidden" name="session_id" value={sessionId} />
       <h2 className="font-display text-xl font-bold text-primary">Request Your Free Estimate</h2>
       <p className="mt-2 text-sm text-muted">
         Fill out the form below and we&apos;ll get back to you with a written quote.
