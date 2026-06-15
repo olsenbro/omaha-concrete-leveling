@@ -7,32 +7,42 @@ export function schemaToScriptHtml(schema: SchemaObject): string {
   return JSON.stringify(schema);
 }
 
-export function localBusinessSchema(city?: string, state?: string): string {
-  return schemaToScriptHtml({
+export function getLocalBusinessSchema(city?: string, state?: string): SchemaObject {
+  return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": `${siteConfig.schemaUrl}/#organization`,
     name: siteConfig.name,
     description:
       "Professional concrete leveling, mudjacking, and foam jacking services in Omaha, Nebraska and surrounding areas.",
     telephone: siteConfig.phone,
+    email: siteConfig.email,
     url: siteConfig.schemaUrl,
+    foundingDate: String(siteConfig.foundedYear),
     address: {
       "@type": "PostalAddress",
+      streetAddress: siteConfig.address.street,
       addressLocality: city ?? siteConfig.address.city,
       addressRegion: state ?? siteConfig.address.state,
+      postalCode: siteConfig.address.zip,
       addressCountry: siteConfig.address.country,
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: siteConfig.geo.latitude,
+      longitude: siteConfig.geo.longitude,
+    },
     areaServed: [
-      "Omaha",
-      "Bellevue",
-      "Papillion",
-      "La Vista",
-      "Ralston",
-      "Millard",
-      "Elkhorn",
-      "Gretna",
-      "Bennington",
-      "Council Bluffs",
+      { "@type": "City", name: "Omaha", containedInPlace: { "@type": "State", name: "Nebraska" } },
+      { "@type": "City", name: "Bellevue", containedInPlace: { "@type": "State", name: "Nebraska" } },
+      { "@type": "City", name: "Papillion", containedInPlace: { "@type": "State", name: "Nebraska" } },
+      { "@type": "City", name: "La Vista", containedInPlace: { "@type": "State", name: "Nebraska" } },
+      { "@type": "City", name: "Ralston", containedInPlace: { "@type": "State", name: "Nebraska" } },
+      { "@type": "City", name: "Millard", containedInPlace: { "@type": "State", name: "Nebraska" } },
+      { "@type": "City", name: "Elkhorn", containedInPlace: { "@type": "State", name: "Nebraska" } },
+      { "@type": "City", name: "Gretna", containedInPlace: { "@type": "State", name: "Nebraska" } },
+      { "@type": "City", name: "Bennington", containedInPlace: { "@type": "State", name: "Nebraska" } },
+      { "@type": "City", name: "Council Bluffs", containedInPlace: { "@type": "State", name: "Iowa" } },
     ],
     serviceType: [
       "Concrete Leveling",
@@ -42,11 +52,15 @@ export function localBusinessSchema(city?: string, state?: string): string {
       "Sidewalk Repair",
     ],
     priceRange: "$$",
-  });
+  };
 }
 
-export function faqSchema(questions: { q: string; a: string }[]): string {
-  return schemaToScriptHtml({
+export function localBusinessSchema(city?: string, state?: string): string {
+  return schemaToScriptHtml(getLocalBusinessSchema(city, state));
+}
+
+export function getFAQPageSchema(questions: { q: string; a: string }[]): SchemaObject {
+  return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: questions.map(({ q, a }) => ({
@@ -54,7 +68,11 @@ export function faqSchema(questions: { q: string; a: string }[]): string {
       name: q,
       acceptedAnswer: { "@type": "Answer", text: a },
     })),
-  });
+  };
+}
+
+export function faqSchema(questions: { q: string; a: string }[]): string {
+  return schemaToScriptHtml(getFAQPageSchema(questions));
 }
 
 export function serviceSchema(name: string, description: string, url: string): string {
@@ -74,20 +92,28 @@ export function serviceSchema(name: string, description: string, url: string): s
   });
 }
 
+export function getHowToSchema(
+  name: string,
+  steps: { name: string; text: string }[],
+): SchemaObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    step: steps.map(({ name: stepName, text }, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: stepName,
+      text,
+    })),
+  };
+}
+
 export function howToSchema(
   name: string,
   steps: { name: string; text: string }[],
 ): string {
-  return schemaToScriptHtml({
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    name,
-    step: steps.map(({ name: stepName, text }) => ({
-      "@type": "HowToStep",
-      name: stepName,
-      text,
-    })),
-  });
+  return schemaToScriptHtml(getHowToSchema(name, steps));
 }
 
 export function breadcrumbSchema(
@@ -107,7 +133,7 @@ export function breadcrumbSchema(
 
 // Legacy helpers — prefer named functions above
 export function getOrganizationSchema(): SchemaObject {
-  return JSON.parse(localBusinessSchema()) as SchemaObject;
+  return getLocalBusinessSchema();
 }
 
 export function getWebSiteSchema(): SchemaObject {

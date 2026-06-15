@@ -16,6 +16,10 @@ export const siteConfig = {
     zip: "68102",
     country: "US",
   },
+  geo: {
+    latitude: 41.2565,
+    longitude: -95.9345,
+  },
   serviceArea: "Omaha, Council Bluffs, Papillion, Bellevue, and surrounding areas",
   gaId: process.env.NEXT_PUBLIC_GA_ID ?? "",
 } as const;

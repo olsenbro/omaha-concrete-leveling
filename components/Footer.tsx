@@ -1,9 +1,7 @@
 import Link from "next/link";
-import Script from "next/script";
 import { Mail, Phone } from "lucide-react";
 import { PhoneLink } from "@/components/PhoneLink";
 import { footerQuickLinks, serviceAreas, siteConfig } from "@/lib/site-config";
-import { localBusinessSchema } from "@/lib/schema";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -106,13 +104,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-
-      <Script
-        id="footer-local-business-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{ __html: localBusinessSchema() }}
-      />
     </footer>
   );
 }

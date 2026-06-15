@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import { ArrowRight, Check, Layers, Phone, Shovel, Star } from "lucide-react";
 import { BeforeAfterGraphic } from "@/components/home/BeforeAfterGraphic";
 import { ConcreteTextureOverlay } from "@/components/home/ConcreteTextureOverlay";
 import { TeamSection } from "@/components/home/TeamSection";
 import { PhoneLink } from "@/components/PhoneLink";
+import { SchemaScript } from "@/components/SchemaScript";
 import { homeFaqItems } from "@/lib/home-faq";
-import { faqSchema } from "@/lib/schema";
+import { homeHowToName, homeHowToSteps } from "@/lib/home-howto";
+import { combineSchemas, getFAQPageSchema, getHowToSchema } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
@@ -81,15 +82,16 @@ const heroTrustBadges = [
 export default function HomePage() {
   return (
     <>
-      <Script
-        id="homepage-faq-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: faqSchema(
+      <SchemaScript
+        schema={combineSchemas(
+          getFAQPageSchema(
             homeFaqItems.map((item) => ({ q: item.question, a: item.answer })),
           ),
-        }}
+          getHowToSchema(
+            homeHowToName,
+            homeHowToSteps.map((step) => ({ name: step.name, text: step.text })),
+          ),
+        )}
       />
 
       {/* ── HERO ── */}

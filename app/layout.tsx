@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 import { SchemaScript } from "@/components/SchemaScript";
 import { TrafficPixel } from "@/components/TrafficPixel";
-import { getWebSiteSchema, localBusinessSchema } from "@/lib/schema";
+import { getLocalBusinessSchema, getWebSiteSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -65,7 +65,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <SchemaScript schema={JSON.parse(localBusinessSchema())} />
+        <SchemaScript schema={getLocalBusinessSchema()} />
         <SchemaScript schema={getWebSiteSchema()} />
         <TrafficPixel />
       </head>
