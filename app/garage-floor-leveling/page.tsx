@@ -10,7 +10,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata = buildPageMetadata({
   title: "Mudjacking Omaha | Garage Floor Leveling & Slab Repair",
   description:
-    "Sunken or uneven garage floor in Omaha? We lift and level settled garage slabs without full replacement. Call for a free estimate — (402) 749-8050.",
+    "Sunken or uneven garage floor in Omaha? Local specialists lift and level settled garage slabs without full replacement. Call for a free estimate — (402) 749-8050.",
   canonical: "/garage-floor-leveling",
 });
 
@@ -18,12 +18,12 @@ const garageSteps = [
   {
     title: "Inspect settlement pattern",
     description:
-      "We identify where the slab has dropped — common spots include the garage apron, center channels, and areas near the garage door where compaction is weakest.",
+      "The contractor identifies where the slab has dropped — common spots include the garage apron, center channels, and areas near the garage door where compaction is weakest.",
   },
   {
     title: "Check drainage and cracks",
     description:
-      "We assess whether water pools toward the center drain or foundation walls, and whether cracks indicate structural issues or simple settlement.",
+      "Whether water pools toward the center drain or foundation walls is assessed, along with whether cracks indicate structural issues or simple settlement.",
   },
   {
     title: "Drill and lift",
@@ -33,7 +33,7 @@ const garageSteps = [
   {
     title: "Restore pitch and finish",
     description:
-      "We confirm proper slope toward the floor drain, patch holes, and clean up. Most garage floor jobs are done in 2–4 hours.",
+      "Proper slope toward the floor drain is confirmed, holes are patched, and the area is cleaned up. Most garage floor jobs are done in 2–4 hours.",
   },
 ];
 
@@ -46,7 +46,7 @@ const garageFaqs = [
   {
     question: "Can you level a garage floor with items still inside?",
     answer:
-      "We need clear access to the sunken areas for drilling and injection. You don't need to empty the entire garage — just move items away from the work zone. We'll let you know exactly how much space we need during the estimate.",
+      "We need clear access to the sunken areas for drilling and injection. You don't need to empty the entire garage — just move items away from the work zone. The contractor will let you know exactly how much space is needed during the estimate.",
   },
   {
     question: "How much does garage floor leveling cost?",
@@ -71,7 +71,7 @@ export default function GarageFloorLevelingPage() {
       serviceSlug="garage-floor-leveling"
       intro={[
         "A sunken or uneven garage floor is one of the most frustrating concrete problems Omaha homeowners deal with — and one of the most unnecessary to replace. Low spots pool water every time it rains, cracks widen at the garage apron, and the floor feels like it's tilting every time you pull in. Garage floor leveling lifts the settled slab back to grade without demolition, without weeks of curing, and at a fraction of replacement cost.",
-        "Our crew levels single-car, two-car, and oversized garage floors throughout the Omaha metro using mudjacking and foam jacking. Most jobs are completed in a single morning, and you can park in your garage the same day.",
+        "Garage floor leveling is available throughout Omaha and the greater metro area from local specialists in our network. Local contractors level single-car, two-car, and oversized garage floors using mudjacking and foam jacking. Most jobs are completed in a single morning, and you can park in your garage the same day.",
       ]}
       schema={{
         name: "Garage Floor Leveling",
@@ -86,8 +86,8 @@ export default function GarageFloorLevelingPage() {
         <p>
           Garage floors bear more concentrated weight than almost any other residential slab — and
           they&apos;re often built on the least-prepared base on the property. Understanding why
-          your floor sank helps us choose the right lifting method and advise on preventing
-          re-settlement.
+          your floor sank helps the contractor choose the right lifting method and advise on
+          preventing re-settlement.
         </p>
         <BulletList
           items={[
@@ -109,9 +109,9 @@ export default function GarageFloorLevelingPage() {
           properly again.
         </p>
         <p>
-          If your garage floor has both settlement and active drainage issues, we&apos;ll address
-          the leveling first and advise on simple grading or downspout adjustments to protect the
-          repair long-term.
+          If your garage floor has both settlement and active drainage issues, the contractor will
+          address the leveling first and advise on simple grading or downspout adjustments to
+          protect the repair long-term.
         </p>
       </ServiceSection>
 

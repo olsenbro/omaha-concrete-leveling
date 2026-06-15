@@ -9,7 +9,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata = buildPageMetadata({
   title: "Mudjacking Omaha | Driveway Leveling Without Replacement",
   description:
-    "Sunken driveway in Omaha? We lift and level settled driveway slabs in hours — no tear-out, no mess. Save thousands vs. replacement. Free estimate.",
+    "Sunken driveway in Omaha? Local specialists lift and level settled driveway slabs in hours — no tear-out, no mess. Save thousands vs. replacement. Free estimate.",
   canonical: "/driveway-leveling",
 });
 
@@ -17,12 +17,12 @@ const drivewaySteps = [
   {
     title: "Inspect and measure",
     description:
-      "We walk your driveway, identify settled panels, measure drop at the garage apron and street edge, and check drainage pitch.",
+      "The contractor walks your driveway, identifies settled panels, measures drop at the garage apron and street edge, and checks drainage pitch.",
   },
   {
     title: "Choose mudjacking or foam jacking",
     description:
-      "Based on slab size, lift depth, and your timeline, we recommend the most cost-effective lifting method for your driveway.",
+      "Based on slab size, lift depth, and your timeline, the pro recommends the most cost-effective lifting method for your driveway.",
   },
   {
     title: "Drill and inject",
@@ -32,7 +32,7 @@ const drivewaySteps = [
   {
     title: "Verify pitch and finish",
     description:
-      "We confirm proper slope away from your garage and toward the street, patch holes, and clean up — typically within 2–4 hours.",
+      "Proper slope away from your garage and toward the street is confirmed, holes are patched, and the area is cleaned up — typically within 2–4 hours.",
   },
 ];
 
@@ -45,7 +45,7 @@ const drivewayFaqs = [
   {
     question: "Can you level just one panel of my driveway?",
     answer:
-      "Yes. Driveways are poured in sections separated by control joints. If only one or two panels have settled, we can lift those specific sections without disturbing the rest of the driveway.",
+      "Yes. Driveways are poured in sections separated by control joints. If only one or two panels have settled, those specific sections can be lifted without disturbing the rest of the driveway.",
   },
   {
     question: "How long before I can park on my driveway?",
@@ -70,7 +70,7 @@ export default function DrivewayLevelingPage() {
       serviceSlug="driveway-leveling"
       intro={[
         "A sunken driveway isn't just annoying — it scrapes your car, pools water toward your garage, and gets worse every Nebraska winter. Most Omaha homeowners assume a settled driveway means a $6,000–$10,000 tear-out and repour. In most cases, it doesn't. Driveway leveling lifts settled panels back to grade in a single visit, without demolition, without days of curing, and at a fraction of the cost.",
-        "Whether your driveway has dropped at the garage apron, developed a trip edge at the sidewalk, or sagged in the middle from soil settlement, our mudjacking and foam jacking crews can restore a level, safe surface — usually the same week you call.",
+        "Whether your driveway has dropped at the garage apron, developed a trip edge at the sidewalk, or sagged in the middle from soil settlement, local mudjacking and foam jacking specialists can restore a level, safe surface — usually the same week you call.",
       ]}
       schema={{
         name: "Driveway Leveling",
@@ -127,8 +127,8 @@ export default function DrivewayLevelingPage() {
           replacement at $4,000–$12,000+, plus 3–7 days of demolition, forming, pouring, and curing.
         </p>
         <p>
-          We provide free, written estimates with no obligation. You&apos;ll know exactly what the
-          job costs before we drill a single hole.
+          Pricing varies by contractor — request a free estimate to get an accurate quote for your
+          project. You&apos;ll know exactly what the job costs before any holes are drilled.
         </p>
       </ServiceSection>
 
@@ -141,9 +141,9 @@ export default function DrivewayLevelingPage() {
         </p>
         <p>
           One Elkhorn homeowner had a 3-inch drop at the garage entrance that made pulling in feel
-          like climbing a ramp. We mudjacked the two affected panels in 90 minutes. Total cost: a
-          fraction of the $8,000 replacement quote they&apos;d received. That&apos;s the kind of result
-          driveway leveling delivers.
+          like climbing a ramp. A local contractor mudjacked the two affected panels in 90 minutes.
+          Total cost: a fraction of the $8,000 replacement quote they&apos;d received. That&apos;s
+          the kind of result driveway leveling delivers.
         </p>
       </ServiceSection>
     </ServicePageTemplate>

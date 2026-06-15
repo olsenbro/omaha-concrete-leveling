@@ -14,7 +14,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata = buildPageMetadata({
   title: "Mudjacking Omaha NE | Concrete Leveling & PolyJacking Experts",
   description:
-    "Sunken driveway or sidewalk in Omaha? We level concrete fast — no replacement needed. Free estimates. Local experts serving Douglas & Sarpy County. Call (402) 749-8050.",
+    "Sunken driveway or sidewalk in Omaha? Connect with local concrete leveling specialists — no replacement needed. Free estimates. Serving Douglas & Sarpy County. Call (402) 749-8050.",
   canonical: "/",
 });
 
@@ -22,12 +22,12 @@ const problemCards = [
   {
     emoji: "🚗",
     title: "Sunken Driveway",
-    body: "Water pools, edges crack, and your car scrapes the dip every time. We lift it back to grade in a single visit.",
+    body: "Water pools, edges crack, and your car scrapes the dip every time. A local pro can lift it back to grade in a single visit.",
   },
   {
     emoji: "🚶",
     title: "Uneven Sidewalk",
-    body: "Trip hazards put you at risk — and in Nebraska, property owners can be liable. We raise sunken slabs flush in hours.",
+    body: "Trip hazards put you at risk — and in Nebraska, property owners can be liable. Sunken slabs can be raised flush in hours.",
   },
   {
     emoji: "🏠",
@@ -98,10 +98,10 @@ export default function HomePage() {
         <div className="container-narrow relative section-padding">
           <div className="grid items-center gap-12 lg:grid-cols-5">
             <div className="lg:col-span-3">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white">
                 Omaha&apos;s Concrete Leveling Specialists
               </p>
-              <h1 className="font-display text-4xl font-extrabold leading-tight text-balance sm:text-5xl lg:text-[3.25rem]">
+              <h1 className="font-display text-4xl font-extrabold leading-tight text-balance text-white sm:text-5xl lg:text-[3.25rem]">
                 Sunken Concrete? We&apos;ll Lift It — Without the Mess or the Cost of Replacement
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90">
@@ -124,7 +124,7 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              <div className="mt-8 flex flex-wrap items-center gap-y-2 text-sm text-white/90">
+              <div className="mt-8 flex flex-wrap items-center gap-y-2 text-sm text-white">
                 {heroTrustBadges.map((badge, i) => (
                   <span key={badge} className="inline-flex items-center">
                     {i > 0 && (
@@ -200,8 +200,8 @@ export default function HomePage() {
               className="mb-8 w-full rounded-xl object-cover"
             />
             <figcaption className="mt-2 text-center text-sm italic text-muted">
-              Our team uses professional-grade mudjacking equipment to lift and level concrete slabs
-              throughout the Omaha metro.
+              Local pros use professional-grade mudjacking equipment to lift and level concrete
+              slabs throughout the Omaha metro.
             </figcaption>
           </figure>
 
@@ -215,8 +215,8 @@ export default function HomePage() {
                 Mudjacking — The Proven Classic
               </h3>
               <p className="mt-4 leading-relaxed text-muted">
-                We drill small holes in your sunken slab and pump a mixture of soil, water, and
-                cement underneath. The slurry fills the void and lifts the concrete back to its
+                Small holes are drilled in your sunken slab and a mixture of soil, water, and cement
+                is pumped underneath. The slurry fills the void and lifts the concrete back to its
                 original position. Holes are patched and nearly invisible. Best for: driveways,
                 sidewalks, patio slabs, pool decks.
               </p>
@@ -253,7 +253,7 @@ export default function HomePage() {
       <section className="bg-white section-padding">
         <div className="container-narrow">
           <h2 className="text-center font-display text-3xl font-bold sm:text-4xl">
-            What Omaha Homeowners Are Saying
+            What Omaha Homeowners Are Saying About Local Concrete Leveling
           </h2>
 
           <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -284,8 +284,9 @@ export default function HomePage() {
             Serving the Greater Omaha Metro
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">
-            We provide concrete leveling services throughout Douglas County, Sarpy County, and
-            across the river into Council Bluffs, Iowa. Not sure if we serve your area? Call us.
+            Local concrete leveling specialists serve homeowners throughout Douglas County, Sarpy
+            County, and across the river into Council Bluffs, Iowa. Not sure if there&apos;s a
+            contractor in your area? Call us and we&apos;ll connect you.
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -302,14 +303,15 @@ export default function HomePage() {
       </section>
 
       {/* ── CTA BANNER ── */}
-      <section className="bg-accent section-padding text-white">
+      <section className="bg-accent section-padding text-dark">
         <div className="container-narrow mx-auto max-w-3xl text-center">
           <h2 className="font-display text-3xl font-bold sm:text-4xl">
             Get Your Free Concrete Leveling Estimate
           </h2>
-          <p className="mt-4 text-lg text-white/90">
-            We&apos;ll assess your sunken concrete and give you an honest quote — usually 50–70%
-            less than replacement. Most jobs completed same week.
+          <p className="mt-4 text-lg text-dark/90">
+            Connect with a local Omaha concrete leveling specialist who will assess your project and
+            provide an honest, no-obligation quote. Most jobs in the area are completed within the
+            same week.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4">
             <PhoneLink className="inline-flex items-center gap-3 rounded-lg bg-white px-10 py-4 text-lg font-bold text-accent shadow-lg transition-colors hover:bg-neutral">
@@ -318,7 +320,7 @@ export default function HomePage() {
             </PhoneLink>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1 text-base font-semibold text-white underline-offset-4 hover:underline"
+              className="inline-flex items-center gap-1 text-base font-semibold text-dark underline-offset-4 hover:underline"
             >
               Or Request Online
               <ArrowRight className="h-4 w-4" aria-hidden="true" />

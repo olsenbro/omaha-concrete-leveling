@@ -27,9 +27,10 @@ export default function AreasServedPage() {
               Concrete Leveling in the Greater Omaha Metro Area
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/90">
-              We provide mudjacking, foam jacking, and concrete leveling throughout Douglas County,
-              Sarpy County, and across the Missouri River into Council Bluffs, Iowa. Select your
-              city below to learn about local services, pricing, and scheduling.
+              Local contractors in our network provide mudjacking, foam jacking, and concrete
+              leveling throughout Douglas County, Sarpy County, and across the Missouri River into
+              Council Bluffs, Iowa. Select your city below to learn about local services, pricing,
+              and scheduling.
             </p>
             <PhoneLink className="mt-8 inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-accent/90">
               <Phone className="h-5 w-5" aria-hidden="true" />
@@ -124,21 +125,22 @@ export default function AreasServedPage() {
             ))}
           </div>
           <p className="mt-8 text-lg text-muted">
-            Not sure if we serve your area? Call{" "}
-            <PhoneLink className="font-semibold text-primary hover:underline" /> — we&apos;ll let
-            you know right away.
+            Not sure if there&apos;s a contractor in your area? Call{" "}
+            <PhoneLink className="font-semibold text-primary hover:underline" /> — we&apos;ll connect
+            you right away.
           </p>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-accent section-padding text-white">
+      <section className="bg-accent section-padding text-dark">
         <div className="container-narrow mx-auto max-w-3xl text-center">
           <h2 className="font-display text-3xl font-bold sm:text-4xl">
             Schedule Service in Your Area
           </h2>
-          <p className="mt-4 text-lg text-white/90">
-            Free on-site estimates throughout the Omaha metro. Most jobs completed same week.
+          <p className="mt-4 text-lg text-dark/90">
+            Free on-site estimates throughout the Omaha metro. Most jobs in the area are completed
+            within the same week.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <PhoneLink className="inline-flex items-center gap-3 rounded-lg bg-white px-10 py-4 text-lg font-bold text-accent shadow-lg transition-colors hover:bg-neutral">
@@ -147,7 +149,7 @@ export default function AreasServedPage() {
             </PhoneLink>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1 text-base font-semibold text-white underline-offset-4 hover:underline"
+              className="inline-flex items-center gap-1 text-base font-semibold text-dark underline-offset-4 hover:underline"
             >
               Request Online
               <ArrowRight className="h-4 w-4" aria-hidden="true" />

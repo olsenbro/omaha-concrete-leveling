@@ -8,6 +8,10 @@ import { PhoneLink } from "@/components/PhoneLink";
 import { mainNavLinks, serviceLinks, siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
+const navLinkBase =
+  "text-sm font-medium text-white transition-colors hover:text-accent hover:underline";
+const navLinkActive = "text-accent";
+
 export function Navigation() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -41,12 +45,12 @@ export function Navigation() {
   }, [mobileOpen]);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-primary shadow-md">
       <div className="container-narrow flex items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link
           href="/"
-          className="shrink-0 font-display text-lg font-bold leading-tight text-primary sm:text-xl"
+          className="shrink-0 font-display text-lg font-bold leading-tight text-white sm:text-xl"
           aria-label="Omaha Mudjacking Pros home"
           onClick={() => setMobileOpen(false)}
         >
@@ -72,8 +76,9 @@ export function Navigation() {
             <button
               type="button"
               className={cn(
-                "inline-flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary",
-                isServicesActive ? "text-primary" : "text-dark",
+                "inline-flex items-center gap-1",
+                navLinkBase,
+                isServicesActive && navLinkActive,
               )}
               aria-expanded={servicesOpen}
               aria-haspopup="true"
@@ -104,8 +109,8 @@ export function Navigation() {
                       href={href}
                       role="menuitem"
                       className={cn(
-                        "block px-4 py-2.5 text-sm transition-colors hover:bg-neutral hover:text-primary",
-                        pathname === href ? "font-medium text-primary" : "text-dark",
+                        "block px-4 py-2.5 text-sm text-dark transition-colors hover:bg-neutral hover:text-primary",
+                        pathname === href && "font-medium text-primary",
                       )}
                       onClick={() => setServicesOpen(false)}
                     >
@@ -121,10 +126,7 @@ export function Navigation() {
             <Link
               key={href}
               href={href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                pathname === href ? "text-primary" : "text-dark",
-              )}
+              className={cn(navLinkBase, pathname === href && navLinkActive)}
             >
               {label}
             </Link>
@@ -139,7 +141,7 @@ export function Navigation() {
         {/* Mobile toggle */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-lg p-2 text-dark lg:hidden"
+          className="inline-flex items-center justify-center rounded-lg p-2 text-white lg:hidden"
           onClick={() => setMobileOpen((open) => !open)}
           aria-expanded={mobileOpen}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
@@ -151,7 +153,7 @@ export function Navigation() {
       {/* Mobile menu — slides down */}
       <div
         className={cn(
-          "overflow-hidden border-t border-primary/10 bg-white transition-all duration-300 ease-in-out lg:hidden",
+          "overflow-hidden border-t border-white/10 bg-white transition-all duration-300 ease-in-out lg:hidden",
           mobileOpen ? "max-h-[calc(100vh-4rem)] opacity-100" : "max-h-0 opacity-0",
         )}
       >
@@ -187,7 +189,7 @@ export function Navigation() {
                         href={href}
                         className={cn(
                           "block rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-neutral",
-                          pathname === href ? "font-medium text-primary" : "text-muted",
+                          pathname === href ? "font-medium text-primary" : "text-dark",
                         )}
                         onClick={() => setMobileOpen(false)}
                       >

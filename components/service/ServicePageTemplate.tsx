@@ -116,13 +116,13 @@ export function ServicePageTemplate({
       </section>
 
       {/* CTA Banner */}
-      <section className="bg-accent section-padding text-white">
+      <section className="bg-accent section-padding text-dark">
         <div className="container-narrow mx-auto max-w-3xl text-center">
           <h2 className="font-display text-3xl font-bold sm:text-4xl">{ctaHeading}</h2>
-          {ctaBody && <p className="mt-4 text-lg text-white/90">{ctaBody}</p>}
-          <p className="mt-4 text-lg text-white/90">
+          {ctaBody && <p className="mt-4 text-lg text-dark/90">{ctaBody}</p>}
+          <p className="mt-4 text-lg text-dark/90">
             Call{" "}
-            <PhoneLink className="font-bold underline underline-offset-4 hover:text-white/90" />{" "}
+            <PhoneLink className="font-bold underline underline-offset-4 hover:text-dark/80" />{" "}
             or request online.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -132,7 +132,7 @@ export function ServicePageTemplate({
             </PhoneLink>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1 text-base font-semibold text-white underline-offset-4 hover:underline"
+              className="inline-flex items-center gap-1 text-base font-semibold text-dark underline-offset-4 hover:underline"
             >
               Request Online
               <ArrowRight className="h-4 w-4" aria-hidden="true" />

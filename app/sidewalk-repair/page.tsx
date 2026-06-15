@@ -8,7 +8,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata = buildPageMetadata({
   title: "Mudjacking Omaha | Sidewalk Leveling & Trip Hazard Repair",
   description:
-    "Uneven sidewalk in Omaha? We raise sunken concrete slabs and eliminate trip hazards fast. Avoid liability. City compliance. Free estimate — (402) 749-8050.",
+    "Uneven sidewalk in Omaha? Local contractors raise sunken concrete slabs and eliminate trip hazards fast. Avoid liability. City compliance. Free estimate — (402) 749-8050.",
   canonical: "/sidewalk-repair",
 });
 
@@ -16,7 +16,7 @@ const sidewalkSteps = [
   {
     title: "Assess the hazard",
     description:
-      "We measure the height differential between panels — Omaha and many municipalities flag gaps of ¾ inch or more as trip hazards requiring correction.",
+      "The height differential between panels is measured — Omaha and many municipalities flag gaps of ¾ inch or more as trip hazards requiring correction.",
   },
   {
     title: "Drill and lift",
@@ -26,7 +26,7 @@ const sidewalkSteps = [
   {
     title: "Verify compliance",
     description:
-      "We confirm the panel is level and the trip edge is eliminated, meeting typical municipal sidewalk standards.",
+      "The panel is confirmed level and the trip edge is eliminated, meeting typical municipal sidewalk standards.",
   },
   {
     title: "Patch and clean up",
@@ -69,7 +69,7 @@ export default function SidewalkRepairPage() {
       serviceSlug="sidewalk-repair"
       intro={[
         "Uneven sidewalk panels are one of the most common — and most overlooked — concrete problems in Omaha. A single sunken slab creates a trip hazard that puts pedestrians at risk and exposes property owners to liability. The good news: most sidewalk trip hazards can be eliminated in hours with mudjacking or foam jacking, without breaking up and replacing the concrete.",
-        "Whether the city flagged your sidewalk, a neighbor tripped on a raised edge, or you've noticed a panel sinking toward your front steps, our Omaha crew can raise it back to grade quickly and affordably.",
+        "Whether the city flagged your sidewalk, a neighbor tripped on a raised edge, or you've noticed a panel sinking toward your front steps, local Omaha contractors can raise it back to grade quickly and affordably.",
       ]}
       schema={{
         name: "Sidewalk Leveling & Trip Hazard Repair",
@@ -103,10 +103,11 @@ export default function SidewalkRepairPage() {
           notice requiring correction within a set period, typically 30 days.
         </p>
         <p>
-          We work with Omaha homeowners who receive these notices regularly. Our leveling process
-          eliminates the trip edge without the cost and disruption of panel replacement. Most jobs
-          are completed in 1–3 hours, well within municipal deadlines. If you&apos;ve received a
-          city notice, call us — we can usually schedule within the same week.
+          Local contractors work with Omaha homeowners who receive these notices regularly. The
+          leveling process eliminates the trip edge without the cost and disruption of panel
+          replacement. Most jobs are completed in 1–3 hours, well within municipal deadlines. If
+          you&apos;ve received a city notice, call us — we can usually connect you with a pro
+          within the same week.
         </p>
       </ServiceSection>
 
@@ -116,15 +117,15 @@ export default function SidewalkRepairPage() {
 
       <ServiceSection title="Sidewalk Leveling Cost in Omaha" className="bg-neutral">
         <p>
-          Sidewalk leveling is one of the most affordable concrete repair services we offer. Single
-          panel lifts typically run $300–$600. Walkway sections with two to four settled panels
-          generally cost $600–$1,200. Compared to panel replacement — which may require permits,
-          demolition, and 3–5 days of curing at $800–$2,000+ per panel — leveling saves
+          Sidewalk leveling is one of the most affordable concrete repair services in the Omaha area.
+          Single panel lifts typically run $300–$600. Walkway sections with two to four settled
+          panels generally cost $600–$1,200. Compared to panel replacement — which may require
+          permits, demolition, and 3–5 days of curing at $800–$2,000+ per panel — leveling saves
           significant time and money.
         </p>
         <p>
-          We provide free estimates and can often quote over the phone if you can describe the
-          location and approximate size of the sunken panel.
+          When you request an estimate, your local pro will assess the location and approximate size
+          of the sunken panel — and can often provide a ballpark quote over the phone.
         </p>
       </ServiceSection>
     </ServicePageTemplate>

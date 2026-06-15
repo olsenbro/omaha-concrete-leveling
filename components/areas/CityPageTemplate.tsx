@@ -76,8 +76,8 @@ export function CityPageTemplate({ city }: CityPageTemplateProps) {
             Concrete Services in {city.name}
           </h2>
           <p className="mt-4 text-lg text-muted">
-            We provide the full range of concrete leveling services throughout {city.name} and
-            surrounding communities:
+            Concrete leveling services are available throughout {city.name} and surrounding
+            communities from local specialists in our network:
           </p>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {serviceLinks.map(({ href, label }) => (
@@ -143,14 +143,14 @@ export function CityPageTemplate({ city }: CityPageTemplateProps) {
       </section>
 
       {/* CTA Banner */}
-      <section className="bg-accent section-padding text-white">
+      <section className="bg-accent section-padding text-dark">
         <div className="container-narrow mx-auto max-w-3xl text-center">
           <h2 className="font-display text-3xl font-bold sm:text-4xl">
             Get Your Free {city.name} Concrete Leveling Estimate
           </h2>
-          <p className="mt-4 text-lg text-white/90">
-            We serve {city.name}, {city.stateName} and the entire Omaha metro. Most jobs completed
-            same week.
+          <p className="mt-4 text-lg text-dark/90">
+            Local contractors serve {city.name}, {city.stateName} and the entire Omaha metro. Most
+            jobs in the area are completed within the same week.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <PhoneLink className="inline-flex items-center gap-3 rounded-lg bg-white px-10 py-4 text-lg font-bold text-accent shadow-lg transition-colors hover:bg-neutral">
@@ -159,7 +159,7 @@ export function CityPageTemplate({ city }: CityPageTemplateProps) {
             </PhoneLink>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1 text-base font-semibold text-white underline-offset-4 hover:underline"
+              className="inline-flex items-center gap-1 text-base font-semibold text-dark underline-offset-4 hover:underline"
             >
               Request Online
               <ArrowRight className="h-4 w-4" aria-hidden="true" />

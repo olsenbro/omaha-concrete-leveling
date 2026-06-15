@@ -15,37 +15,37 @@ const services = [
   {
     name: "Concrete Leveling",
     description:
-      "We lift and level sunken concrete slabs using precision injection techniques. Ideal for driveways, sidewalks, garage floors, and pool decks that have settled over time.",
+      "Local specialists lift and level sunken concrete slabs using precision injection techniques. Ideal for driveways, sidewalks, garage floors, and pool decks that have settled over time.",
     benefits: ["Eliminates trip hazards", "Restores drainage slope", "Same-day completion"],
   },
   {
     name: "Mudjacking",
     description:
-      "Our mudjacking process fills voids beneath your slab with a high-strength grout mixture, raising the concrete back to its original position and preventing further settlement.",
+      "The mudjacking process fills voids beneath your slab with a high-strength grout mixture, raising the concrete back to its original position and preventing further settlement.",
     benefits: ["Cost-effective vs. replacement", "Minimal disruption", "Proven long-term results"],
   },
   {
     name: "Driveway Repair",
     description:
-      "Uneven driveway panels create safety risks and water pooling. We level individual sections or entire driveways to restore a smooth, safe surface.",
+      "Uneven driveway panels create safety risks and water pooling. Local contractors level individual sections or entire driveways to restore a smooth, safe surface.",
     benefits: ["Improves curb appeal", "Prevents vehicle damage", "Extends slab lifespan"],
   },
   {
     name: "Patios & Walkways",
     description:
-      "Settled patios and walkways are common in Omaha due to soil expansion and freeze-thaw cycles. We restore level surfaces for safer outdoor living.",
+      "Settled patios and walkways are common in Omaha due to soil expansion and freeze-thaw cycles. Local pros restore level surfaces for safer outdoor living.",
     benefits: ["Family-safe surfaces", "Better water runoff", "Quick turnaround"],
   },
   {
     name: "Commercial Slab Repair",
     description:
-      "Warehouse floors, loading docks, and retail entrances require level surfaces for safety and operations. We work around your schedule to minimize downtime.",
+      "Warehouse floors, loading docks, and retail entrances require level surfaces for safety and operations. Local contractors work around your schedule to minimize downtime.",
     benefits: ["ADA compliance support", "Minimal business disruption", "Volume pricing available"],
   },
   {
     name: "Void Filling & Stabilization",
     description:
-      "Before slabs crack or collapse further, we identify and fill subsurface voids caused by erosion, plumbing leaks, or poor compaction.",
+      "Before slabs crack or collapse further, contractors identify and fill subsurface voids caused by erosion, plumbing leaks, or poor compaction.",
     benefits: ["Prevents future cracking", "Structural stabilization", "Engineer-approved methods"],
   },
 ];
@@ -71,8 +71,8 @@ export default function ServicesPage() {
             Concrete Leveling Services in Omaha
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-white/85">
-            From residential driveways to commercial warehouse floors, we deliver professional
-            mudjacking and concrete leveling backed by local expertise.
+            From residential driveways to commercial warehouse floors, our network connects you with
+            professional mudjacking and concrete leveling specialists backed by local expertise.
           </p>
         </div>
       </section>
@@ -101,12 +101,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-accent section-padding text-white">
+      <section className="bg-accent section-padding text-dark">
         <div className="container-narrow text-center">
           <h2 className="font-display text-2xl font-bold">Not Sure Which Service You Need?</h2>
-          <p className="mx-auto mt-3 max-w-lg text-white/90">
-            Call for a free on-site assessment. We&apos;ll recommend the right solution for your
-            property.
+          <p className="mx-auto mt-3 max-w-lg text-dark/90">
+            Call for a free on-site assessment. A local specialist will recommend the right solution
+            for your property.
           </p>
           <a href={siteConfig.phoneHref} className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-bold text-accent">
             <Phone className="h-5 w-5" aria-hidden="true" />

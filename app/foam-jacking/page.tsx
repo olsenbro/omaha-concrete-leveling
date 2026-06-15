@@ -67,10 +67,10 @@ export default function FoamJackingPage() {
           performance — ideal when precision, aesthetics, or fast turnaround are priorities.
         </p>
         <p>
-          During your free estimate, we&apos;ll assess your specific situation and recommend the
-          method that delivers the best long-term result for your property and budget. Many Omaha
-          homeowners choose foam jacking for pool decks and garage floors, and mudjacking for large
-          driveways where cost savings matter most.
+          During your free estimate, a local contractor will assess your specific situation and
+          recommend the method that delivers the best long-term result for your property and budget.
+          Many Omaha homeowners choose foam jacking for pool decks and garage floors, and mudjacking
+          for large driveways where cost savings matter most.
         </p>
         <ServiceComparisonTable
           headers={["", "Mudjacking", "Foam Jacking"]}
@@ -86,7 +86,7 @@ export default function FoamJackingPage() {
         />
       </ServiceSection>
 
-      <ServiceSection title="When We Recommend Foam Jacking" className="bg-neutral">
+      <ServiceSection title="When Foam Jacking Is Recommended" className="bg-neutral">
         <p>
           Foam jacking isn&apos;t always necessary — but in these situations, it&apos;s often the
           clear winner over traditional mudjacking or full replacement:
@@ -101,9 +101,9 @@ export default function FoamJackingPage() {
           ]}
         />
         <p className="mt-4">
-          Our Omaha crew uses commercial-grade polyurethane systems rated for Nebraska&apos;s
-          freeze-thaw cycles. Every foam jacking job includes a written estimate, a 5-year warranty,
-          and a post-job walkthrough so you know exactly what to expect.
+          Local Omaha contractors use commercial-grade polyurethane systems rated for Nebraska&apos;s
+          freeze-thaw cycles. Every foam jacking job typically includes a written estimate, a
+          5-year warranty, and a post-job walkthrough so you know exactly what to expect.
         </p>
       </ServiceSection>
 

@@ -3,10 +3,10 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 
 const trustPoints = [
-  "Locally owned and operated",
-  "No subcontractors — our own crew on every job",
-  "Free written estimates",
-  "5-year warranty on all work",
+  "Local Omaha-area contractors only",
+  "Free estimates — no obligation",
+  "Fast response — typically same or next day",
+  "Licensed and insured professionals",
 ];
 
 export function TeamSection() {
@@ -31,13 +31,13 @@ export function TeamSection() {
               Your Local Team
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
-              Omaha&apos;s Concrete Leveling Specialists
+              Connecting You With Omaha&apos;s Best Concrete Leveling Specialists
             </h2>
             <p className="mt-4 leading-relaxed text-muted">
-              We&apos;re a locally operated concrete leveling company serving homeowners throughout
-              Douglas County, Sarpy County, and the greater Omaha metro. Every job gets our personal
-              attention — no subcontractors, no national call centers. When you call us, you talk to
-              the people doing the work.
+              We help Omaha homeowners find trusted, local concrete leveling contractors — fast.
+              Submit your project details and we&apos;ll connect you with a qualified specialist in
+              Douglas County, Sarpy County, or the greater metro area who can assess your concrete
+              and provide a free, no-obligation estimate.
             </p>
 
             <ul className="mt-6 space-y-3">
@@ -50,7 +50,7 @@ export function TeamSection() {
             </ul>
 
             <Link href="/contact" className="btn-primary mt-8 w-fit">
-              Meet Our Team
+              Request a Free Estimate
             </Link>
           </div>
         </div>

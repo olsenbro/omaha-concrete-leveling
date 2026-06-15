@@ -30,8 +30,8 @@ export default function AboutPage() {
             Your Local Omaha Concrete Experts
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-white/85">
-            We&apos;re a locally focused team dedicated to helping Omaha homeowners and businesses
-            solve concrete settlement problems quickly, affordably, and permanently.
+            We connect Omaha homeowners and businesses with experienced local concrete leveling
+            specialists who help solve settlement problems quickly, affordably, and permanently.
           </p>
         </div>
       </section>
@@ -60,7 +60,7 @@ export default function AboutPage() {
               quality concrete leveling done right the first time.
             </p>
             <p>
-              Every member of our crew is trained in modern mudjacking and polyurethane lifting
+              Contractors in our network are trained in modern mudjacking and polyurethane lifting
               techniques, ensuring your project is completed safely and efficiently.
             </p>
           </div>

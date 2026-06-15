@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Omaha Mudjacking Pros",
   tagline: "Professional Concrete Leveling & Mudjacking in Omaha, NE",
   description:
-    "Trusted local experts for concrete leveling, mudjacking, and slab repair in Omaha, Nebraska. Free estimates, same-week service, and results that last.",
+    "Connect with trusted local concrete leveling and mudjacking specialists in Omaha, Nebraska. Free estimates, same-week service referrals, and results that last.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://mudjackingomaha.com",
   schemaUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://mudjackingomaha.com",
   phone: "(402) 749-8050",

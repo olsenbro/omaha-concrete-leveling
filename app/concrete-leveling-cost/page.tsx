@@ -17,8 +17,8 @@ export const metadata = buildPageMetadata({
 
 const howToSteps = [
   { name: "Request a free estimate", text: "Call or contact us online for a no-obligation estimate." },
-  { name: "On-site assessment", text: "We visit and assess the slab, void, and settling depth." },
-  { name: "Receive written quote", text: "We provide a written, itemized quote before work begins." },
+  { name: "On-site assessment", text: "A local contractor visits and assesses the slab, void, and settling depth." },
+  { name: "Receive written quote", text: "Your pro provides a written, itemized quote before work begins." },
   { name: "Schedule and complete work", text: "Most jobs are completed within the same week, in 2–4 hours." },
 ];
 
@@ -46,7 +46,7 @@ const costFactors = [
   {
     title: "Additional drainage work recommended",
     description:
-      "If poor drainage caused the settlement, we may recommend downspout extensions or grading adjustments alongside leveling. This adds modest cost upfront but extends the life of the repair significantly.",
+      "If poor drainage caused the settlement, a contractor may recommend downspout extensions or grading adjustments alongside leveling. This adds modest cost upfront but extends the life of the repair significantly.",
   },
 ];
 
@@ -54,12 +54,12 @@ const quoteSteps = [
   {
     title: "Request a free estimate",
     description:
-      "Call (402) 749-8050 or fill out our online contact form. Describe the sunken area and we'll schedule an on-site visit — usually within the same week.",
+      "Call (402) 749-8050 or fill out our online contact form. Describe the sunken area and we'll connect you with a local pro for an on-site visit — usually within the same week.",
   },
   {
     title: "Inspector assesses your slab",
     description:
-      "We measure settling depth, evaluate slab thickness, estimate void size beneath the concrete, and identify the likely cause of settlement.",
+      "The contractor measures settling depth, evaluates slab thickness, estimates void size beneath the concrete, and identifies the likely cause of settlement.",
   },
   {
     title: "Receive a written quote",
@@ -82,7 +82,7 @@ const costFaqs = [
   {
     question: "Are there any situations where leveling won't work?",
     answer:
-      "Yes. Concrete that is severely cracked, crumbling, or heaved by tree roots usually needs replacement. We'll give you an honest assessment — we won't sell you leveling if your slab needs replacement.",
+      "Yes. Concrete that is severely cracked, crumbling, or heaved by tree roots usually needs replacement. A reputable contractor will give you an honest assessment — they won't sell you leveling if your slab needs replacement.",
   },
   {
     question: "How long will the repair last?",
@@ -92,7 +92,7 @@ const costFaqs = [
   {
     question: "Can I get multiple slabs done for a discount?",
     answer:
-      "Yes — we offer pricing breaks for larger jobs. More slabs in a single visit reduces the per-slab cost.",
+      "Yes — many local contractors offer pricing breaks for larger jobs. More slabs in a single visit reduces the per-slab cost.",
   },
 ];
 
@@ -118,9 +118,18 @@ export default function ConcreteLevelingCostPage() {
         faqs={costFaqs}
         faqTitle="Concrete Leveling Cost FAQ"
         ctaHeading="Get Your Free Omaha Mudjacking Estimate"
-        ctaBody="We'll assess your sunken concrete and provide a written quote — usually 50–70% less than replacement."
+        ctaBody="Connect with a local Omaha concrete leveling specialist who will assess your project and provide an honest, no-obligation quote."
       >
         <ServiceSection title="Concrete Leveling Cost Summary — Omaha, NE">
+          <div className="mb-6 rounded-lg border-l-4 border-accent bg-[#FFF8F0] p-4">
+            <p className="font-semibold text-dark">📋 About These Estimates</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              The price ranges on this page reflect typical costs from local Omaha-area concrete
+              leveling contractors based on publicly available market data. Actual pricing varies by
+              contractor, project size, and site conditions. We recommend requesting at least one
+              free estimate to get accurate pricing for your specific project.
+            </p>
+          </div>
           <p>
             These ranges reflect typical 2025 pricing for residential projects in Douglas County,
             Sarpy County, and the greater Omaha metro. Your exact quote depends on slab count, lift
@@ -163,10 +172,10 @@ export default function ConcreteLevelingCostPage() {
           />
           <p className="mt-6 font-medium text-dark">
             Our recommendation: if your slab is structurally sound — no major crumbling, no severe
-            root heave, and the concrete is intact but uneven — leveling is almost always the smarter
-            investment. Choose replacement when the slab is broken into multiple pieces, actively
-            deteriorating, or heaved beyond what lifting can correct. We&apos;ll tell you honestly
-            which category yours falls into during the free estimate.
+            root heave, and the concrete is intact but uneven — leveling is almost always the
+            smarter investment. Choose replacement when the slab is broken into multiple pieces,
+            actively deteriorating, or heaved beyond what lifting can correct. A reputable contractor
+            will tell you honestly which category yours falls into during the free estimate.
           </p>
         </ServiceSection>
 
@@ -181,14 +190,14 @@ export default function ConcreteLevelingCostPage() {
           <p>
             Leveling is worth it when the underlying slab is sound and the settlement is due to
             normal soil movement. However, if poor drainage, downspout runoff, or erosion continues
-            unchecked, the same slab may settle again over time. That&apos;s why we assess the cause
-            during every estimate — not just the symptom.
+            unchecked, the same slab may settle again over time. That&apos;s why reputable contractors
+            assess the cause during every estimate — not just the symptom.
           </p>
           <p>
             Addressing root causes like rerouting downspouts away from the foundation, improving
             grading, or fixing gutter overflow extends the life of any leveling repair by years. A
-            $200 drainage fix can protect a $1,500 mudjacking job — and we&apos;ll flag those
-            opportunities during your on-site assessment.
+            $200 drainage fix can protect a $1,500 mudjacking job — and your contractor will flag
+            those opportunities during the on-site assessment.
           </p>
         </ServiceSection>
 

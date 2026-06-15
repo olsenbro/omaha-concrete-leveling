@@ -17,7 +17,7 @@ const patioSteps = [
   {
     title: "Evaluate settlement and drainage",
     description:
-      "We inspect tilt direction, measure drop, and check whether water drains toward your foundation — a common problem with settling patios.",
+      "The contractor inspects tilt direction, measures drop, and checks whether water drains toward your foundation — a common problem with settling patios.",
   },
   {
     title: "Select lifting method",
@@ -32,7 +32,7 @@ const patioSteps = [
   {
     title: "Finish and inspect",
     description:
-      "Access holes are patched, the area is cleaned, and we walk the surface with you to confirm the result.",
+      "Access holes are patched, the area is cleaned, and the contractor walks the surface with you to confirm the result.",
   },
 ];
 
@@ -55,7 +55,7 @@ const patioFaqs = [
   {
     question: "Will leveling stop water from draining toward my house?",
     answer:
-      "Yes — when done correctly. We don't just lift the slab; we restore proper pitch so water drains away from your foundation. This is one of the most important benefits of patio leveling in Omaha's clay soil environment.",
+      "Yes — when done correctly. Contractors don't just lift the slab; they restore proper pitch so water drains away from your foundation. This is one of the most important benefits of patio leveling in Omaha's clay soil environment.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function PatioLevelingPage() {
       serviceSlug="patio-leveling"
       intro={[
         "A sunken patio or tilting pool deck doesn't just look bad — it creates drainage problems, trip hazards, and gaps that worsen every freeze-thaw cycle. Replacing a patio means days of demolition, forming, and curing, plus the cost of removing furniture, grills, and landscaping. Patio leveling restores a flat, safe surface in hours, without tearing out a single slab.",
-        "Our Omaha crew levels patios, pool decks, and outdoor living spaces using mudjacking and foam jacking. Whether your patio has settled toward the house, your pool deck has developed trip edges, or individual slabs have separated at the joints, we can lift them back to grade — usually the same week you call.",
+        "Patio and pool deck leveling is available throughout Omaha and the greater metro area from local specialists in our network. Whether your patio has settled toward the house, your pool deck has developed trip edges, or individual slabs have separated at the joints, a local pro can lift them back to grade — usually the same week you call.",
       ]}
       schema={{
         name: "Patio & Pool Deck Leveling",
@@ -126,8 +126,9 @@ export default function PatioLevelingPage() {
           $3,000–$8,000+ and takes a week or more.
         </p>
         <p>
-          We provide free on-site estimates. You&apos;ll receive a written quote before any work
-          begins, with no pressure and no obligation.
+          Pricing varies by contractor — request a free estimate to get an accurate quote for your
+          project. You&apos;ll receive a written quote before any work begins, with no pressure and
+          no obligation.
         </p>
       </ServiceSection>
     </ServicePageTemplate>
