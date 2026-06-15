@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { ArrowRight, Check, Layers, Phone, Shovel, Star } from "lucide-react";
 import { BeforeAfterGraphic } from "@/components/home/BeforeAfterGraphic";
 import { ConcreteTextureOverlay } from "@/components/home/ConcreteTextureOverlay";
+import { TeamSection } from "@/components/home/TeamSection";
 import { PhoneLink } from "@/components/PhoneLink";
 import { homeFaqItems } from "@/lib/home-faq";
 import { faqSchema } from "@/lib/schema";
@@ -91,7 +93,7 @@ export default function HomePage() {
       />
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden bg-primary text-white">
+      <section className="relative overflow-hidden text-white">
         <ConcreteTextureOverlay />
         <div className="container-narrow relative section-padding">
           <div className="grid items-center gap-12 lg:grid-cols-5">
@@ -139,7 +141,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="hidden lg:col-span-2 lg:block">
+            <div className="lg:col-span-2">
               <BeforeAfterGraphic />
             </div>
           </div>
@@ -187,7 +189,23 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 lg:grid-cols-2">
+          <figure className="mx-auto mt-12 max-w-5xl">
+            <Image
+              src="/images/mudjacking-process.png"
+              alt="Professional mudjacking contractor lifting concrete driveway slab in Omaha Nebraska"
+              width={1200}
+              height={600}
+              sizes="100vw"
+              loading="lazy"
+              className="mb-8 w-full rounded-xl object-cover"
+            />
+            <figcaption className="mt-2 text-center text-sm italic text-muted">
+              Our team uses professional-grade mudjacking equipment to lift and level concrete slabs
+              throughout the Omaha metro.
+            </figcaption>
+          </figure>
+
+          <div className="grid gap-8 lg:grid-cols-2">
             {/* Mudjacking */}
             <article className="rounded-xl border border-primary/15 bg-white p-8 shadow-sm">
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -228,6 +246,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <TeamSection />
 
       {/* ── SOCIAL PROOF ── */}
       <section className="bg-white section-padding">
