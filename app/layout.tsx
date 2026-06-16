@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Inter, Montserrat } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 import { SchemaScript } from "@/components/SchemaScript";
-import { TrafficPixel } from "@/components/TrafficPixel";
 import { getLocalBusinessSchema, getWebSiteSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
@@ -67,13 +67,15 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <SchemaScript schema={getLocalBusinessSchema()} />
         <SchemaScript schema={getWebSiteSchema()} />
-        <TrafficPixel />
       </head>
       <body className="flex min-h-screen flex-col">
         {/* Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 measurement ID */}
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Script src="/js/site-config.js" strategy="beforeInteractive" />
+        <Script src="/js/brosites-tracking.js" strategy="beforeInteractive" />
+        <Script src="/js/main.js" strategy="beforeInteractive" />
       </body>
     </html>
   );

@@ -1,8 +1,3 @@
-"use client";
-
-import { useEffect, useState, type FormEvent } from "react";
-import { PhoneLink } from "@/components/PhoneLink";
-
 const projectTypes = [
   "Driveway",
   "Sidewalk",
@@ -31,65 +26,12 @@ const inputClassName =
   "w-full rounded-lg border border-primary/20 px-4 py-3 text-dark focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20";
 
 export function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
-  const [sessionId, setSessionId] = useState("");
-
-  useEffect(() => {
-    try {
-      setSessionId(sessionStorage.getItem("_sid") || "");
-    } catch {
-      // sessionStorage unavailable
-    }
-  }, []);
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    const form = event.currentTarget;
-    try {
-      const sid = sessionStorage.getItem("_sid") || "";
-      setSessionId(sid);
-      const sessionInput = form.elements.namedItem("session_id") as HTMLInputElement | null;
-      if (sessionInput) sessionInput.value = sid;
-    } catch {
-      // sessionStorage unavailable
-    }
-
-    const data = Object.fromEntries(new FormData(form).entries());
-
-    // TODO: Replace with Formspree, Resend, or API route for real lead delivery
-    console.log("Contact form submission:", data);
-
-    setSubmitted(true);
-    form.reset();
-  }
-
-  if (submitted) {
-    return (
-      <div className="rounded-xl border border-accent/30 bg-accent/5 p-8 text-center shadow-sm">
-        <p className="font-display text-2xl font-bold text-primary">Request Received!</p>
-        <p className="mt-3 text-muted">
-          Thanks for reaching out. We&apos;ll review your request and contact you within one
-          business day — usually much sooner.
-        </p>
-        <p className="mt-4 text-sm text-muted">
-          Need a faster response? Call{" "}
-          <PhoneLink className="font-semibold text-primary hover:underline" />
-        </p>
-        <button
-          type="button"
-          onClick={() => setSubmitted(false)}
-          className="mt-6 text-sm font-semibold text-accent hover:underline"
-        >
-          Submit another request
-        </button>
-      </div>
-    );
-  }
-
   return (
-    <form onSubmit={handleSubmit} className="rounded-xl bg-white p-8 shadow-sm">
-      <input type="hidden" name="session_id" value={sessionId} />
+    <form
+      action="/__bs_submit"
+      data-bs-form
+      className="rounded-xl bg-white p-8 shadow-sm"
+    >
       <h2 className="font-display text-xl font-bold text-primary">Request Your Free Estimate</h2>
       <p className="mt-2 text-sm text-muted">
         Fill out the form below and we&apos;ll get back to you with a written quote.
