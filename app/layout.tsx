@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import { BroSitesScripts } from "@/components/BroSitesScripts";
 import { Footer } from "@/components/Footer";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Navigation } from "@/components/Navigation";
 import { SchemaScript } from "@/components/SchemaScript";
 import { getLocalBusinessSchema, getWebSiteSchema } from "@/lib/schema";
@@ -69,7 +70,7 @@ export default function RootLayout({
         <SchemaScript schema={getWebSiteSchema()} />
       </head>
       <body className="flex min-h-screen flex-col">
-        {/* Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 measurement ID */}
+        <GoogleAnalytics gaId={siteConfig.gaId} />
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -18,8 +18,7 @@ export default function ThankYouPage() {
       <div className="container-narrow mx-auto max-w-xl text-center">
         <h1 className="font-display text-4xl font-extrabold text-primary">Thank You!</h1>
         <p className="mt-4 text-lg text-muted">
-          Your request has been received. We&apos;ll review your details and contact you within
-          one business day — usually much sooner.
+          Your request has been received. A local contractor will follow up as soon as possible.
         </p>
         <p className="mt-4 text-sm text-muted">
           Need a faster response? Call{" "}

@@ -28,7 +28,7 @@ export const siteConfig = {
     longitude: -95.9345,
   },
   serviceArea: "Omaha, Council Bluffs, Papillion, Bellevue, and surrounding areas",
-  gaId: process.env.NEXT_PUBLIC_GA_ID ?? "",
+  gaId: process.env.NEXT_PUBLIC_GA_ID?.trim() || "G-WJN1M8CZCC",
 } as const;
 
 export const serviceLinks = [
