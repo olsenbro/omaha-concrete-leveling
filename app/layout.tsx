@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import { Inter, Montserrat } from "next/font/google";
+import { BroSitesScripts } from "@/components/BroSitesScripts";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 import { SchemaScript } from "@/components/SchemaScript";
@@ -73,9 +73,7 @@ export default function RootLayout({
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
-        <Script src="/js/site-config.js" strategy="afterInteractive" />
-        <Script src="/js/brosites-tracking.js" strategy="afterInteractive" />
-        <Script src="/js/main.js" strategy="afterInteractive" />
+        <BroSitesScripts />
       </body>
     </html>
   );

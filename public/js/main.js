@@ -1,18 +1,25 @@
-document.querySelectorAll("form[data-bs-form]").forEach(function (form) {
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
+(function () {
+  function showErrorToast() {
+    var t = document.createElement("div");
+    t.textContent = "Something went wrong. Please call us or try again.";
+    t.style.cssText =
+      "position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#dc2626;color:#fff;padding:12px 20px;border-radius:6px;z-index:9999";
+    document.body.appendChild(t);
+    setTimeout(function () {
+      t.remove();
+    }, 5000);
+  }
 
-    var fd = new FormData(form);
+  function getSiteId() {
     var siteId =
       window.SITE_CONFIG &&
       window.SITE_CONFIG.forms &&
       window.SITE_CONFIG.forms.siteId;
+    if (!siteId || siteId === "NEXT_PUBLIC_SITE_ID_PLACEHOLDER") return "";
+    return siteId;
+  }
 
-    if (!siteId || siteId === "NEXT_PUBLIC_SITE_ID_PLACEHOLDER") {
-      showErrorToast();
-      return;
-    }
-
+  function buildPayload(fd) {
     var messageParts = [];
     var message = fd.get("message");
     if (message) messageParts.push(String(message));
@@ -22,7 +29,7 @@ document.querySelectorAll("form[data-bs-form]").forEach(function (form) {
       if (value) messageParts.push(key + ": " + value);
     });
 
-    var payload = {
+    return {
       name:
         [fd.get("first_name"), fd.get("last_name")].filter(Boolean).join(" ") ||
         fd.get("name") ||
@@ -32,6 +39,16 @@ document.querySelectorAll("form[data-bs-form]").forEach(function (form) {
       message: messageParts.join("\n"),
       session_id: window.__bs_session_id || null,
     };
+  }
+
+  async function handleSubmit(form) {
+    var siteId = getSiteId();
+    if (!siteId) {
+      showErrorToast();
+      return;
+    }
+
+    var fd = new FormData(form);
 
     try {
       var res = await fetch(
@@ -39,7 +56,7 @@ document.querySelectorAll("form[data-bs-form]").forEach(function (form) {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
+          body: JSON.stringify(buildPayload(fd)),
         }
       );
       if (!res.ok) throw new Error("submit failed");
@@ -48,16 +65,16 @@ document.querySelectorAll("form[data-bs-form]").forEach(function (form) {
     } catch (err) {
       showErrorToast();
     }
-  });
-});
+  }
 
-function showErrorToast() {
-  var t = document.createElement("div");
-  t.textContent = "Something went wrong. Please call us or try again.";
-  t.style.cssText =
-    "position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#dc2626;color:#fff;padding:12px 20px;border-radius:6px;z-index:9999";
-  document.body.appendChild(t);
-  setTimeout(function () {
-    t.remove();
-  }, 5000);
-}
+  document.addEventListener(
+    "submit",
+    function (e) {
+      var form = e.target;
+      if (!form || !form.matches || !form.matches("form[data-bs-form]")) return;
+      e.preventDefault();
+      handleSubmit(form);
+    },
+    true
+  );
+})();

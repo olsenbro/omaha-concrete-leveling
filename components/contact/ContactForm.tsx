@@ -1,3 +1,9 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useState, type FormEvent } from "react";
+import { showBroSitesErrorToast, submitBroSitesLead } from "@/lib/brosites";
+
 const projectTypes = [
   "Driveway",
   "Sidewalk",
@@ -26,10 +32,37 @@ const inputClassName =
   "w-full rounded-lg border border-primary/20 px-4 py-3 text-dark focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20";
 
 export function ContactForm() {
+  const router = useRouter();
+  const [submitting, setSubmitting] = useState(false);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (submitting) return;
+
+    setSubmitting(true);
+    const form = event.currentTarget;
+
+    try {
+      const ok = await submitBroSitesLead(new FormData(form));
+      if (!ok) {
+        showBroSitesErrorToast();
+        return;
+      }
+
+      form.reset();
+      router.push("/thank-you/");
+    } catch {
+      showBroSitesErrorToast();
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
   return (
     <form
       action="/__bs_submit"
-      data-bs-form
+      method="post"
+      onSubmit={handleSubmit}
       className="rounded-xl bg-white p-8 shadow-sm"
     >
       <h2 className="font-display text-xl font-bold text-primary">Request Your Free Estimate</h2>
@@ -177,8 +210,12 @@ export function ContactForm() {
           />
         </div>
 
-        <button type="submit" className="btn-primary w-full py-4 text-base">
-          Request My Free Estimate
+        <button
+          type="submit"
+          disabled={submitting}
+          className="btn-primary w-full py-4 text-base disabled:cursor-not-allowed disabled:opacity-70"
+        >
+          {submitting ? "Sending…" : "Request My Free Estimate"}
         </button>
       </div>
     </form>
