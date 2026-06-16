@@ -1,14 +1,12 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { coreServices, getServicePath } from "@/lib/services";
 
-export const SERVICE_PAGES = [
-  { slug: "mudjacking", href: "/mudjacking", label: "Mudjacking" },
-  { slug: "foam-jacking", href: "/foam-jacking", label: "Foam/PolyJacking" },
-  { slug: "driveway-leveling", href: "/driveway-leveling", label: "Driveway Leveling" },
-  { slug: "sidewalk-repair", href: "/sidewalk-repair", label: "Sidewalk Repair" },
-  { slug: "patio-leveling", href: "/patio-leveling", label: "Patio Leveling" },
-  { slug: "garage-floor-leveling", href: "/garage-floor-leveling", label: "Garage Floor Leveling" },
-] as const;
+export const SERVICE_PAGES = coreServices.map((service) => ({
+  slug: service.slug,
+  href: getServicePath(service.slug),
+  label: service.label,
+}));
 
 export function getRelatedServices(currentSlug: string, count = 2) {
   return SERVICE_PAGES.filter((s) => s.slug !== currentSlug).slice(0, count);

@@ -5,6 +5,7 @@ import { PhoneLink } from "@/components/PhoneLink";
 import { SchemaScript } from "@/components/SchemaScript";
 import { getWebPageSchema } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
+import { getKeywordsForPage } from "@/lib/keyword-targets";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata = buildPageMetadata({
@@ -12,6 +13,7 @@ export const metadata = buildPageMetadata({
   description:
     "Request a free concrete leveling estimate in Omaha. We'll assess your sunken driveway, sidewalk, or patio and give you an honest quote — usually same week.",
   canonical: "/contact",
+  keywords: getKeywordsForPage("/contact"),
 });
 
 const trustPoints = [

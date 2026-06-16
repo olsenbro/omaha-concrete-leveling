@@ -1,7 +1,10 @@
-import { Phone } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Phone } from "lucide-react";
 import { SchemaScript } from "@/components/SchemaScript";
+import { PhoneLink } from "@/components/PhoneLink";
 import { createPageMetadata } from "@/lib/seo";
 import { getServiceSchema, getWebPageSchema } from "@/lib/schema";
+import { coreServices, getServicePath } from "@/lib/services";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata = createPageMetadata({
@@ -11,52 +14,15 @@ export const metadata = createPageMetadata({
   path: "/services",
 });
 
-const services = [
-  {
-    name: "Concrete Leveling",
-    description:
-      "Local specialists lift and level sunken concrete slabs using precision injection techniques. Ideal for driveways, sidewalks, garage floors, and pool decks that have settled over time.",
-    benefits: ["Eliminates trip hazards", "Restores drainage slope", "Same-day completion"],
-  },
-  {
-    name: "Mudjacking",
-    description:
-      "The mudjacking process fills voids beneath your slab with a high-strength grout mixture, raising the concrete back to its original position and preventing further settlement.",
-    benefits: ["Cost-effective vs. replacement", "Minimal disruption", "Proven long-term results"],
-  },
-  {
-    name: "Driveway Repair",
-    description:
-      "Uneven driveway panels create safety risks and water pooling. Local contractors level individual sections or entire driveways to restore a smooth, safe surface.",
-    benefits: ["Improves curb appeal", "Prevents vehicle damage", "Extends slab lifespan"],
-  },
-  {
-    name: "Patios & Walkways",
-    description:
-      "Settled patios and walkways are common in Omaha due to soil expansion and freeze-thaw cycles. Local pros restore level surfaces for safer outdoor living.",
-    benefits: ["Family-safe surfaces", "Better water runoff", "Quick turnaround"],
-  },
-  {
-    name: "Commercial Slab Repair",
-    description:
-      "Warehouse floors, loading docks, and retail entrances require level surfaces for safety and operations. Local contractors work around your schedule to minimize downtime.",
-    benefits: ["ADA compliance support", "Minimal business disruption", "Volume pricing available"],
-  },
-  {
-    name: "Void Filling & Stabilization",
-    description:
-      "Before slabs crack or collapse further, contractors identify and fill subsurface voids caused by erosion, plumbing leaks, or poor compaction.",
-    benefits: ["Prevents future cracking", "Structural stabilization", "Engineer-approved methods"],
-  },
-];
-
 const pageSchema = [
   getWebPageSchema(
     "/services",
     "Mudjacking Omaha | Concrete Leveling Services",
     "Full-service concrete leveling and mudjacking in Omaha, NE.",
   ),
-  ...services.map((s) => getServiceSchema(s.name, s.description)),
+  ...coreServices.map((service) =>
+    getServiceSchema(service.schema.name, service.schema.description),
+  ),
 ];
 
 export default function ServicesPage() {
@@ -78,26 +44,25 @@ export default function ServicesPage() {
       </section>
 
       <section className="section-padding bg-neutral">
-        <div className="container-narrow space-y-8">
-          {services.map((service) => (
-            <article
-              key={service.name}
-              className="rounded-xl border border-primary/10 bg-white p-8 shadow-sm"
-            >
-              <h2 className="font-display text-2xl font-bold text-primary">{service.name}</h2>
-              <p className="mt-4 leading-relaxed text-muted">{service.description}</p>
-              <ul className="mt-6 flex flex-wrap gap-3">
-                {service.benefits.map((benefit) => (
-                  <li
-                    key={benefit}
-                    className="rounded-full bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary"
-                  >
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
+        <div className="container-narrow">
+          <div className="grid gap-6 sm:grid-cols-2">
+            {coreServices.map((service) => (
+              <Link
+                key={service.slug}
+                href={getServicePath(service.slug)}
+                className="group rounded-xl border border-primary/10 bg-white p-8 shadow-sm transition-all hover:border-primary hover:shadow-md"
+              >
+                <h2 className="font-display text-2xl font-bold text-primary group-hover:text-primary-dark">
+                  {service.label}
+                </h2>
+                <p className="mt-4 leading-relaxed text-muted">{service.description}</p>
+                <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-accent">
+                  Learn more
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -108,10 +73,10 @@ export default function ServicesPage() {
             Call for a free on-site assessment. A local specialist will recommend the right solution
             for your property.
           </p>
-          <a href={siteConfig.phoneHref} className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-bold text-accent">
+          <PhoneLink className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-bold text-accent">
             <Phone className="h-5 w-5" aria-hidden="true" />
             {siteConfig.phone}
-          </a>
+          </PhoneLink>
         </div>
       </section>
     </>

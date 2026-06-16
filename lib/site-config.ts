@@ -32,12 +32,12 @@ export const siteConfig = {
 } as const;
 
 export const serviceLinks = [
-  { href: "/mudjacking", label: "Mudjacking" },
-  { href: "/foam-jacking", label: "Foam/PolyJacking" },
-  { href: "/driveway-leveling", label: "Driveway Leveling" },
-  { href: "/sidewalk-repair", label: "Sidewalk Repair" },
-  { href: "/patio-leveling", label: "Patio Leveling" },
-  { href: "/garage-floor-leveling", label: "Garage Floor Leveling" },
+  { href: "/services/mudjacking", label: "Mudjacking" },
+  { href: "/services/foam-jacking", label: "Foam/PolyJacking" },
+  { href: "/services/driveway-leveling", label: "Driveway Leveling" },
+  { href: "/services/sidewalk-repair", label: "Sidewalk Repair" },
+  { href: "/services/patio-leveling", label: "Patio Leveling" },
+  { href: "/services/garage-floor-leveling", label: "Garage Floor Leveling" },
 ] as const;
 
 export const mainNavLinks = [
@@ -49,10 +49,10 @@ export const mainNavLinks = [
 
 export const footerQuickLinks = [
   { href: "/", label: "Home" },
-  { href: "/mudjacking", label: "Mudjacking" },
-  { href: "/foam-jacking", label: "PolyJacking" },
-  { href: "/driveway-leveling", label: "Driveway Leveling" },
-  { href: "/sidewalk-repair", label: "Sidewalk Repair" },
+  { href: "/services/mudjacking", label: "Mudjacking" },
+  { href: "/services/foam-jacking", label: "PolyJacking" },
+  { href: "/services/driveway-leveling", label: "Driveway Leveling" },
+  { href: "/services/sidewalk-repair", label: "Sidewalk Repair" },
   { href: "/concrete-leveling-cost", label: "Cost Guide" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },

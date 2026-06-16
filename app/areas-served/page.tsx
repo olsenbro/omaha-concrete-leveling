@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PhoneLink } from "@/components/PhoneLink";
 import { hubAreaCards } from "@/lib/areas-served";
 import { buildPageMetadata } from "@/lib/seo";
+import { getKeywordsForPage } from "@/lib/keyword-targets";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata = buildPageMetadata({
@@ -11,6 +12,7 @@ export const metadata = buildPageMetadata({
   description:
     "Omaha Mudjacking Pros provides concrete leveling and mudjacking throughout the Omaha metro — Douglas County, Sarpy County, and Council Bluffs, IA. See all service areas.",
   canonical: "/areas-served",
+  keywords: getKeywordsForPage("/areas-served"),
 });
 
 export default function AreasServedPage() {

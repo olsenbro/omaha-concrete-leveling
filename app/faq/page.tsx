@@ -6,6 +6,7 @@ import { FaqAccordion } from "@/components/faq/FaqAccordion";
 import { PhoneLink } from "@/components/PhoneLink";
 import { faqCategories } from "@/lib/faq-page-data";
 import { buildPageMetadata } from "@/lib/seo";
+import { getKeywordsForPage } from "@/lib/keyword-targets";
 import { faqSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 
@@ -14,6 +15,7 @@ export const metadata = buildPageMetadata({
   description:
     "Everything you want to know about concrete leveling, mudjacking, and foam jacking in Omaha. Honest answers from Omaha Mudjacking Pros.",
   canonical: "/faq",
+  keywords: getKeywordsForPage("/faq"),
 });
 
 export default function FaqPage() {
@@ -67,10 +69,10 @@ export default function FaqPage() {
             <Link href="/concrete-leveling-cost" className="btn-secondary text-sm">
               2025 Cost Guide
             </Link>
-            <Link href="/mudjacking" className="btn-secondary text-sm">
+            <Link href="/services/mudjacking" className="btn-secondary text-sm">
               Mudjacking Services
             </Link>
-            <Link href="/foam-jacking" className="btn-secondary text-sm">
+            <Link href="/services/foam-jacking" className="btn-secondary text-sm">
               Foam Jacking Services
             </Link>
             <Link href="/areas-served" className="btn-secondary text-sm">

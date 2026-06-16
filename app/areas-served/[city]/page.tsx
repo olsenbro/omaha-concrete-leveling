@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CityPageTemplate } from "@/components/areas/CityPageTemplate";
 import { cityAreas, getCityBySlug } from "@/lib/areas-served";
+import { getKeywordsForPage } from "@/lib/keyword-targets";
 import { buildPageMetadata } from "@/lib/seo";
 
 type CityPageProps = {
@@ -19,6 +20,7 @@ export function generateMetadata({ params }: CityPageProps): Metadata {
     title: city.title,
     description: city.description,
     canonical: `/areas-served/${city.slug}`,
+    keywords: getKeywordsForPage(`/areas-served/${city.slug}`, city),
   });
 }
 

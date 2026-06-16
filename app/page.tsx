@@ -10,6 +10,7 @@ import { homeFaqItems } from "@/lib/home-faq";
 import { homeHowToName, homeHowToSteps } from "@/lib/home-howto";
 import { combineSchemas, getFAQPageSchema, getHowToSchema } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
+import { getKeywordsForPage } from "@/lib/keyword-targets";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata = buildPageMetadata({
@@ -17,6 +18,7 @@ export const metadata = buildPageMetadata({
   description:
     "Sunken driveway or sidewalk in Omaha? Connect with local concrete leveling specialists — no replacement needed. Free estimates. Serving Douglas & Sarpy County. Call (402) 749-8050.",
   canonical: "/",
+  keywords: getKeywordsForPage("/"),
 });
 
 const problemCards = [
@@ -119,7 +121,7 @@ export default function HomePage() {
                   Get a Free Estimate
                 </Link>
                 <Link
-                  href="/mudjacking"
+                  href="/services/mudjacking"
                   className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-white hover:text-primary"
                 >
                   See How It Works

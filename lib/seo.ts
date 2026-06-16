@@ -10,6 +10,8 @@ type GenerateMetadataOptions = {
   ogImage?: string;
   /** When true, bypasses the root layout title template */
   absoluteTitle?: boolean;
+  /** Semrush keyword targets for this page */
+  keywords?: string[];
 };
 
 function resolveCanonical(canonical: string): string {
@@ -24,6 +26,7 @@ export function buildPageMetadata({
   canonical,
   ogImage = "/icon-512.png",
   absoluteTitle = true,
+  keywords,
 }: GenerateMetadataOptions): Metadata {
   const canonicalUrl = resolveCanonical(canonical);
   const ogImageUrl = ogImage.startsWith("http")
@@ -33,6 +36,7 @@ export function buildPageMetadata({
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,
+    ...(keywords?.length ? { keywords: keywords.join(", ") } : {}),
     alternates: { canonical: canonicalUrl },
     openGraph: {
       title,

@@ -44,9 +44,9 @@ export default function NotFound() {
             <p className="text-sm font-semibold text-dark">Popular services:</p>
             <ul className="mt-3 flex flex-wrap justify-center gap-3">
               {[
-                { href: "/mudjacking", label: "Mudjacking" },
-                { href: "/driveway-leveling", label: "Driveway Leveling" },
-                { href: "/sidewalk-repair", label: "Sidewalk Repair" },
+                { href: "/services/mudjacking", label: "Mudjacking" },
+                { href: "/services/driveway-leveling", label: "Driveway Leveling" },
+                { href: "/services/sidewalk-repair", label: "Sidewalk Repair" },
                 { href: "/concrete-leveling-cost", label: "Cost Guide" },
               ].map(({ href, label }) => (
                 <li key={href}>

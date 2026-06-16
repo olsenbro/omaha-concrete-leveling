@@ -4,7 +4,8 @@ import { ArrowRight, Phone } from "lucide-react";
 import { Breadcrumbs, type BreadcrumbItem } from "@/components/Breadcrumbs";
 import { PhoneLink } from "@/components/PhoneLink";
 import { ServiceInternalLinks } from "@/components/service/ServiceInternalLinks";
-import { serviceSchema } from "@/lib/schema";
+import { faqSchema, serviceSchema } from "@/lib/schema";
+import { getServicePath } from "@/lib/services";
 import { siteConfig } from "@/lib/site-config";
 
 export type ServiceFaq = {
@@ -38,7 +39,8 @@ export function ServicePageTemplate({
   children,
 }: ServicePageTemplateProps) {
   const schemaUrl =
-    schema?.url ?? (serviceSlug ? `${siteConfig.schemaUrl}/${serviceSlug}` : siteConfig.schemaUrl);
+    schema?.url ??
+    (serviceSlug ? `${siteConfig.schemaUrl}${getServicePath(serviceSlug)}` : siteConfig.schemaUrl);
 
   return (
     <>
@@ -49,6 +51,17 @@ export function ServicePageTemplate({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: serviceSchema(schema.name, schema.description, schemaUrl),
+          }}
+        />
+      )}
+
+      {faqs.length > 0 && (
+        <Script
+          id={`faq-schema-${serviceSlug ?? "page"}`}
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: faqSchema(faqs.map(({ question, answer }) => ({ q: question, a: answer }))),
           }}
         />
       )}

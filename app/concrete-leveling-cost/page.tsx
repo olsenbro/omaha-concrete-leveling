@@ -6,6 +6,7 @@ import {
   ServiceSection,
 } from "@/components/service/ServicePageTemplate";
 import { buildPageMetadata } from "@/lib/seo";
+import { getKeywordsForPage } from "@/lib/keyword-targets";
 import { howToSchema } from "@/lib/schema";
 
 export const metadata = buildPageMetadata({
@@ -13,6 +14,7 @@ export const metadata = buildPageMetadata({
   description:
     "How much does concrete leveling cost in Omaha? Mudjacking runs $600–$2,500. Foam jacking $800–$3,000. Full guide with cost factors, comparisons, and free estimate.",
   canonical: "/concrete-leveling-cost",
+  keywords: getKeywordsForPage("/concrete-leveling-cost"),
 });
 
 const howToSteps = [

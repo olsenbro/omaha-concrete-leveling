@@ -40,12 +40,13 @@ Omaha, Bellevue, Papillion, La Vista, Ralston, Millard, Elkhorn, Gretna, Benning
 ## Key Pages
 
 - Home: https://mudjackingomaha.com/
-- Mudjacking: https://mudjackingomaha.com/mudjacking
-- Foam/PolyJacking: https://mudjackingomaha.com/foam-jacking
-- Driveway Leveling: https://mudjackingomaha.com/driveway-leveling
-- Sidewalk Repair: https://mudjackingomaha.com/sidewalk-repair
-- Patio Leveling: https://mudjackingomaha.com/patio-leveling
-- Garage Floor Leveling: https://mudjackingomaha.com/garage-floor-leveling
+- Services: https://mudjackingomaha.com/services
+- Mudjacking: https://mudjackingomaha.com/services/mudjacking
+- Foam/PolyJacking: https://mudjackingomaha.com/services/foam-jacking
+- Driveway Leveling: https://mudjackingomaha.com/services/driveway-leveling
+- Sidewalk Repair: https://mudjackingomaha.com/services/sidewalk-repair
+- Patio Leveling: https://mudjackingomaha.com/services/patio-leveling
+- Garage Floor Leveling: https://mudjackingomaha.com/services/garage-floor-leveling
 - Cost Guide: https://mudjackingomaha.com/concrete-leveling-cost
 - Areas Served: https://mudjackingomaha.com/areas-served
 - FAQ: https://mudjackingomaha.com/faq

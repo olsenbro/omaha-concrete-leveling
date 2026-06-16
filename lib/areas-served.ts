@@ -10,6 +10,9 @@ export type CityArea = {
   h1: string;
   intro: string[];
   body: string[];
+  zipCodes: string[];
+  neighborhoods: string[];
+  landmarks: string[];
   neighbors: string[];
 };
 
@@ -33,6 +36,25 @@ export const cityAreas: CityArea[] = [
       "We regularly level driveways, garage floors, and sidewalk panels across Bellevue — from the established streets near Haworth Park to newer developments along Highway 370. Most residential jobs are completed in a single visit. A typical Bellevue driveway with two or three settled panels runs $800–$1,800 for mudjacking, compared to $5,000–$9,000+ for full replacement.",
       "If you've noticed water pooling on your driveway, a trip hazard on your sidewalk, or gaps widening between patio slabs, addressing it early prevents further cracking and liability exposure. Nebraska property owners are responsible for sidewalk maintenance — and Bellevue is no exception. Local contractors in our network provide free on-site estimates with written quotes before any work begins.",
     ],
+    zipCodes: ["68005", "68123", "68133", "68147", "68157"],
+    neighborhoods: [
+      "Olde Towne Bellevue",
+      "Fort Crook",
+      "Fontenelle Hills",
+      "Twin Creek",
+      "Wolf Creek",
+      "La Platte",
+      "Offutt AFB Housing",
+      "Tregaron",
+    ],
+    landmarks: [
+      "Fontenelle Forest",
+      "Offutt Air Force Base",
+      "Haworth Park",
+      "Olde Towne Bellevue",
+      "Sarpy County Museum",
+      "Bellevue Medical Center",
+    ],
     neighbors: ["Papillion", "La Vista", "Omaha"],
   },
   {
@@ -53,6 +75,24 @@ export const cityAreas: CityArea[] = [
       "Papillion's location in Sarpy County means the same expansive clay soils that affect Bellevue and La Vista are at work here too. Freeze-thaw cycles from November through March heave and settle the ground annually, widening gaps at control joints and accelerating the separation between adjacent slabs. Sidewalk panels along residential streets are especially vulnerable — and Sarpy County municipalities take trip hazard complaints seriously.",
       "Local contractors work throughout Papillion's residential areas, from the established neighborhoods near Papillion Landing to the growing developments along Highway 50. They level driveways, patios, pool decks, garage floors, and sidewalk panels using mudjacking for budget-conscious projects and foam jacking when precision, fast cure times, or waterproof performance matter.",
       "Typical Papillion residential jobs range from $600–$2,200 depending on the number of slabs and lift depth. A single sunken sidewalk panel often costs $300–$500. A two-car driveway with partial settlement typically runs $900–$1,600. Local contractors provide written, no-obligation quotes and can usually schedule within the same week you call.",
+    ],
+    zipCodes: ["68046", "68133", "68138"],
+    neighborhoods: [
+      "Shadow Lake",
+      "Tara Hills",
+      "Walnut Creek",
+      "Papillion Landing",
+      "Eagle Ridge",
+      "Carriage Hills",
+      "Summerfield",
+      "Copper Ridge",
+    ],
+    landmarks: [
+      "SumTur Amphitheater",
+      "Werner Park",
+      "Halleck Park",
+      "Papio Bay Aquatic Center",
+      "Papillion Creek Trail",
     ],
     neighbors: ["Bellevue", "La Vista", "Elkhorn"],
   },
@@ -75,6 +115,24 @@ export const cityAreas: CityArea[] = [
       "We also level patio slabs, pool decks, and outdoor living areas common in Elkhorn's larger residential properties. These surfaces often settle on the house-side edge where downspout runoff erodes soil beneath the slab — a problem that worsens silently until water begins pooling against the foundation wall.",
       "Elkhorn projects tend toward the higher end of our residential pricing due to larger slab sizes: driveways typically run $1,200–$2,500, patio leveling $800–$2,000, and sidewalk panels $300–$600 each. Every job starts with a free on-site assessment and a written quote — no obligation, no pressure.",
     ],
+    zipCodes: ["68022", "68116", "68118", "68135"],
+    neighborhoods: [
+      "Elkhorn Ridge",
+      "West Dodge Corridor",
+      "West Maple",
+      "Fire Ridge",
+      "Sterling Ridge",
+      "Elk Run",
+      "Blue Sage",
+      "Quarry Oaks",
+    ],
+    landmarks: [
+      "Elkhorn Ridge Golf Club",
+      "Elkhorn South High School",
+      "West Dodge Expressway",
+      "Elkhorn Valley Golf Course",
+      "Elkhorn Town Center",
+    ],
     neighbors: ["Omaha", "Bennington", "Gretna"],
   },
   {
@@ -96,6 +154,24 @@ export const cityAreas: CityArea[] = [
       "Trip hazards on La Vista sidewalks are both a safety and liability issue. Nebraska law holds property owners responsible for maintaining adjacent walkways. If a pedestrian trips on a raised or sunken panel outside your home, you may face liability — especially if the hazard was previously identified. Leveling the affected panel takes hours and costs a fraction of replacement.",
       "La Vista residential leveling typically costs $600–$2,200 depending on project scope. Single sidewalk panels run $300–$500. Driveways with two to four settled sections range from $900–$1,800. Local contractors provide free written estimates and same-week scheduling throughout La Vista and surrounding Sarpy County communities.",
     ],
+    zipCodes: ["68128", "68138"],
+    neighborhoods: [
+      "Meadows",
+      "Spring Creek",
+      "Centennial",
+      "Metro West",
+      "Huntington Park",
+      "Portal Village",
+      "Park View",
+      "Giles Road Area",
+    ],
+    landmarks: [
+      "La Vista Community Center",
+      "Veterans Memorial Park",
+      "Werner Park",
+      "La Vista Sports Complex",
+      "Portal Elementary Area",
+    ],
     neighbors: ["Papillion", "Bellevue", "Ralston"],
   },
   {
@@ -116,6 +192,25 @@ export const cityAreas: CityArea[] = [
       "Council Bluffs' housing stock ranges from historic neighborhoods near the downtown bluffs to mid-century developments in the city's western sections and newer construction along the I-80 corridor. Each era presents different concrete challenges: older slabs with deteriorated expansion joints, mid-century driveways with significant garage apron settlement, and newer construction experiencing post-compaction settling on freshly graded lots.",
       "Local contractors level driveways, sidewalks, patios, garage floors, and commercial slabs throughout Council Bluffs — from the Manawa area to Big Lake and the neighborhoods surrounding Bayliss Park. Mudjacking handles most residential projects cost-effectively, while foam jacking is preferred for pool decks, areas near utilities, and projects where same-day return to service is critical.",
       "Crossing the river doesn't add cost or delay to your project. Council Bluffs pricing mirrors typical Omaha rates: sidewalk panels $300–$500, driveways $800–$2,200, and patio leveling $600–$2,000. Local contractors provide free on-site estimates on the Iowa side of the metro with written quotes and 5-year warranties on qualifying work.",
+    ],
+    zipCodes: ["51501", "51502", "51503"],
+    neighborhoods: [
+      "Manawa",
+      "Big Lake",
+      "Bayliss Park",
+      "West Broadway",
+      "East End",
+      "Mall of the Bluffs Area",
+      "South Omaha Bridge District",
+      "I-80 Corridor",
+    ],
+    landmarks: [
+      "Bayliss Park",
+      "Lewis and Clark Monument",
+      "Tom Hanafan River's Edge Park",
+      "Horseshoe Council Bluffs",
+      "Mid-America Center",
+      "RailsWest Railroad Museum",
     ],
     neighbors: ["Omaha", "Carter Lake", "Bellevue"],
   },
