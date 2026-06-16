@@ -1,10 +1,17 @@
+const DEFAULT_SITE_URL = "https://mudjackingomaha.com";
+
+function resolvePublicSiteUrl(value: string | undefined): string {
+  const trimmed = value?.trim();
+  return trimmed ? trimmed : DEFAULT_SITE_URL;
+}
+
 export const siteConfig = {
   name: "Omaha Mudjacking Pros",
   tagline: "Professional Concrete Leveling & Mudjacking in Omaha, NE",
   description:
     "Connect with trusted local concrete leveling and mudjacking specialists in Omaha, Nebraska. Free estimates, same-week service referrals, and results that last.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://mudjackingomaha.com",
-  schemaUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://mudjackingomaha.com",
+  url: resolvePublicSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
+  schemaUrl: resolvePublicSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
   phone: "(402) 749-8050",
   phoneHref: "tel:+14027498050",
   email: "info@mudjackingomaha.com",

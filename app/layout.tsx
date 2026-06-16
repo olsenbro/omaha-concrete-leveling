@@ -73,9 +73,9 @@ export default function RootLayout({
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
-        <Script src="/js/site-config.js" strategy="beforeInteractive" />
-        <Script src="/js/brosites-tracking.js" strategy="beforeInteractive" />
-        <Script src="/js/main.js" strategy="beforeInteractive" />
+        <Script src="/js/site-config.js" strategy="afterInteractive" />
+        <Script src="/js/brosites-tracking.js" strategy="afterInteractive" />
+        <Script src="/js/main.js" strategy="afterInteractive" />
       </body>
     </html>
   );
