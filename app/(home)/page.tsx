@@ -2,21 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check, Layers, Phone, Shovel, Star } from "lucide-react";
 import { BeforeAfterGraphic } from "@/components/home/BeforeAfterGraphic";
+import { BlogSection } from "@/components/home/BlogSection";
 import { ConcreteTextureOverlay } from "@/components/home/ConcreteTextureOverlay";
 import { TeamSection } from "@/components/home/TeamSection";
 import { PhoneLink } from "@/components/PhoneLink";
-import { SchemaScript } from "@/components/SchemaScript";
 import { homeFaqItems } from "@/lib/home-faq";
-import { homeHowToName, homeHowToSteps } from "@/lib/home-howto";
-import { combineSchemas, getFAQPageSchema, getHowToSchema } from "@/lib/schema";
+import { HOME_PAGE_META_DESCRIPTION } from "@/lib/home-page";
 import { buildPageMetadata } from "@/lib/seo";
 import { getKeywordsForPage } from "@/lib/keyword-targets";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata = buildPageMetadata({
   title: "Mudjacking Omaha NE | Concrete Leveling & PolyJacking Experts",
-  description:
-    "Sunken driveway or sidewalk in Omaha? Connect with local concrete leveling specialists — no replacement needed. Free estimates. Serving Douglas & Sarpy County. Call (402) 749-8050.",
+  description: HOME_PAGE_META_DESCRIPTION,
   canonical: "/",
   keywords: getKeywordsForPage("/"),
 });
@@ -84,18 +82,6 @@ const heroTrustBadges = [
 export default function HomePage() {
   return (
     <>
-      <SchemaScript
-        schema={combineSchemas(
-          getFAQPageSchema(
-            homeFaqItems.map((item) => ({ q: item.question, a: item.answer })),
-          ),
-          getHowToSchema(
-            homeHowToName,
-            homeHowToSteps.map((step) => ({ name: step.name, text: step.text })),
-          ),
-        )}
-      />
-
       {/* ── HERO ── */}
       <section className="relative overflow-hidden text-white">
         <ConcreteTextureOverlay />
@@ -197,9 +183,9 @@ export default function HomePage() {
             <Image
               src="/images/mudjacking-process.png"
               alt="Professional mudjacking contractor lifting concrete driveway slab in Omaha Nebraska"
-              width={1200}
-              height={600}
-              sizes="100vw"
+              width={896}
+              height={448}
+              sizes="(max-width: 768px) 100vw, 896px"
               loading="lazy"
               className="mb-8 w-full rounded-xl object-cover"
             />
@@ -306,6 +292,47 @@ export default function HomePage() {
         </div>
       </section>
 
+      <BlogSection />
+
+      {/* ── FAQ (crawlable for AEO) ── */}
+      <section id="faq" className="bg-white section-padding" aria-labelledby="home-faq-heading">
+        <div className="container-narrow mx-auto max-w-3xl">
+          <h2 id="home-faq-heading" className="text-center font-display text-3xl font-bold sm:text-4xl">
+            Frequently Asked Questions About Concrete Leveling in Omaha
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-muted">
+            Direct answers to the questions Omaha homeowners ask most about mudjacking, foam jacking,
+            and concrete leveling costs.
+          </p>
+
+          <div className="mt-10 space-y-3">
+            {homeFaqItems.map(({ question, answer }) => (
+              <article
+                key={question}
+                className="rounded-xl border border-primary/10 bg-neutral"
+              >
+                <h3 className="px-6 py-5 font-display text-base font-bold text-primary">
+                  {question}
+                </h3>
+                <p className="border-t border-primary/10 px-6 pb-5 pt-2 leading-relaxed text-muted">
+                  {answer}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <p className="mt-8 text-center">
+            <Link
+              href="/faq"
+              className="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary-dark"
+            >
+              See All FAQs
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </p>
+        </div>
+      </section>
+
       {/* ── CTA BANNER ── */}
       <section className="bg-accent section-padding text-dark">
         <div className="container-narrow mx-auto max-w-3xl text-center">
@@ -330,47 +357,6 @@ export default function HomePage() {
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* ── FAQ PREVIEW ── */}
-      <section className="bg-white section-padding">
-        <div className="container-narrow mx-auto max-w-3xl">
-          <h2 className="text-center font-display text-3xl font-bold sm:text-4xl">
-            Common Questions About Concrete Leveling in Omaha
-          </h2>
-
-          <div className="mt-10 space-y-3">
-            {homeFaqItems.map(({ question, answer }) => (
-              <details
-                key={question}
-                className="group rounded-xl border border-primary/10 bg-neutral open:bg-white open:shadow-sm"
-              >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 font-display text-base font-bold text-primary marker:content-none [&::-webkit-details-marker]:hidden">
-                  {question}
-                  <span
-                    className="shrink-0 text-accent transition-transform group-open:rotate-45"
-                    aria-hidden="true"
-                  >
-                    +
-                  </span>
-                </summary>
-                <div className="border-t border-primary/10 px-6 pb-5 pt-2">
-                  <p className="leading-relaxed text-muted">{answer}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-
-          <p className="mt-8 text-center">
-            <Link
-              href="/faq"
-              className="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary-dark"
-            >
-              See All FAQs
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-          </p>
         </div>
       </section>
     </>

@@ -1,6 +1,7 @@
 import { siteConfig } from "./site-config";
 import { coreServices, getServicePath } from "./services";
 import { neighborhoodAreas, getNeighborhoodPath } from "./neighborhoods";
+import { blogPosts, getBlogPath } from "./blog-posts";
 
 export type SiteRoute = {
   path: string;
@@ -30,6 +31,12 @@ export const siteRoutes: SiteRoute[] = [
   { path: "/areas-served/la-vista", changeFrequency: "monthly", priority: 0.7 },
   { path: "/areas-served/council-bluffs", changeFrequency: "monthly", priority: 0.7 },
   { path: "/faq", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/blog", changeFrequency: "weekly", priority: 0.7 },
+  ...blogPosts.map((post) => ({
+    path: getBlogPath(post.slug),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  })),
   { path: "/contact", changeFrequency: "monthly", priority: 0.6 },
 ];
 

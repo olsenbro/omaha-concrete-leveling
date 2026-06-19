@@ -19,6 +19,16 @@ export const homeFaqItems = [
     answer:
       "Concrete that is crumbling, broken into many pieces, or heaved by tree roots usually needs replacement. Concrete that has simply sunk due to soil settlement is an excellent candidate for leveling. A reputable contractor will tell you honestly during the estimate whether leveling is the right call for your specific slab.",
   },
+  {
+    question: "What is the difference between mudjacking and foam jacking?",
+    answer:
+      "Mudjacking pumps a soil-cement slurry beneath the slab — it's the most cost-effective option for large driveways and patios. Foam jacking injects expanding polyurethane foam that cures in 15 minutes, uses smaller holes, and is waterproof. Both lift sunken concrete without replacement. Your contractor will recommend the best method for your project during a free estimate.",
+  },
+  {
+    question: "Do you serve Bellevue, Papillion, and Council Bluffs?",
+    answer:
+      "Yes. Local contractors in our network serve the entire Omaha metro — including Bellevue, Papillion, La Vista, Elkhorn, Millard, Gretna, Bennington, and Council Bluffs, Iowa. Crossing the Missouri River does not add cost or delay to your project.",
+  },
 ] as const;
 
 export const faqPageSchema = {

@@ -34,17 +34,15 @@ export function BeforeAfterGraphic() {
           <span className="mb-3 block pt-4 text-center text-xs font-semibold uppercase tracking-wider text-white/70">
             Before
           </span>
-          <div className="relative mx-4 h-[200px] overflow-hidden rounded-lg lg:h-[280px]">
-            <Image
-              src="/images/driveway-before.png"
-              alt="Sunken and cracked concrete driveway before mudjacking repair in Omaha"
-              fill
-              sizes="(max-width: 768px) 50vw, 25vw"
-              loading="lazy"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-[#DC2626]/20" aria-hidden="true" />
-          </div>
+          <Image
+            src="/images/driveway-before.png"
+            alt="Sunken and cracked concrete driveway before mudjacking repair in Omaha"
+            width={400}
+            height={225}
+            sizes="(max-width: 1024px) 45vw, 200px"
+            priority
+            className="mx-4 h-[200px] w-[calc(100%-2rem)] rounded-lg object-cover lg:h-[225px]"
+          />
           <ul className="space-y-1.5 px-4 py-3">
             {beforePoints.map((point) => (
               <li
@@ -63,17 +61,14 @@ export function BeforeAfterGraphic() {
           <span className="mb-3 block pt-4 text-center text-xs font-semibold uppercase tracking-wider text-accent-light">
             After
           </span>
-          <div className="relative mx-4 h-[200px] overflow-hidden rounded-lg lg:h-[280px]">
-            <Image
-              src="/images/driveway-after.png"
-              alt="Level smooth concrete driveway after mudjacking repair in Omaha Nebraska"
-              fill
-              sizes="(max-width: 768px) 50vw, 25vw"
-              loading="lazy"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-[#16A34A]/15" aria-hidden="true" />
-          </div>
+          <Image
+            src="/images/driveway-after.png"
+            alt="Level smooth concrete driveway after mudjacking repair in Omaha Nebraska"
+            width={400}
+            height={225}
+            sizes="(max-width: 1024px) 45vw, 200px"
+            className="mx-4 h-[200px] w-[calc(100%-2rem)] rounded-lg object-cover lg:h-[225px]"
+          />
           <ul className="space-y-1.5 px-4 py-3">
             {afterPoints.map((point) => (
               <li

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import { BroSitesScripts } from "@/components/BroSitesScripts";
+import { HomePageHeadSchemas } from "@/components/home/HomePageHeadSchemas";
 import { Footer } from "@/components/Footer";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Navigation } from "@/components/Navigation";
@@ -66,10 +67,10 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <SchemaScript schema={getLocalBusinessSchema()} />
-        <SchemaScript schema={getWebSiteSchema()} />
+        <HomePageHeadSchemas />
       </head>
       <body className="flex min-h-screen flex-col">
+        <SchemaScript schema={[getLocalBusinessSchema(), getWebSiteSchema()]} />
         <GoogleAnalytics gaId={siteConfig.gaId} />
         <Navigation />
         <main className="flex-1">{children}</main>

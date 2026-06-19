@@ -1,8 +1,9 @@
-const DEFAULT_SITE_URL = "https://mudjackingomaha.com";
+const DEFAULT_SITE_URL = "https://www.mudjackingomaha.com";
 
 function resolvePublicSiteUrl(value: string | undefined): string {
   const trimmed = value?.trim();
-  return trimmed ? trimmed : DEFAULT_SITE_URL;
+  const url = trimmed || DEFAULT_SITE_URL;
+  return url.replace(/^https:\/\/mudjackingomaha\.com(?=\/|$)/, DEFAULT_SITE_URL);
 }
 
 export const siteConfig = {
@@ -27,6 +28,9 @@ export const siteConfig = {
     latitude: 41.2565,
     longitude: -95.9345,
   },
+  /** Google Maps embed for the Omaha metro service area (no API key required). */
+  mapEmbedUrl:
+    "https://maps.google.com/maps?q=Omaha,+NE+68102&z=10&hl=en&output=embed",
   serviceArea: "Omaha, Council Bluffs, Papillion, Bellevue, and surrounding areas",
   gaId: process.env.NEXT_PUBLIC_GA_ID?.trim() || "G-WJN1M8CZCC",
 } as const;

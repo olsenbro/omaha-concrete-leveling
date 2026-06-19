@@ -18,9 +18,9 @@ export function TeamSection() {
             <Image
               src="/images/team-photo.png"
               alt="Omaha Mudjacking Pros team — local concrete leveling specialists serving the greater Omaha metro area"
-              width={700}
-              height={500}
-              sizes="(max-width: 768px) 100vw, 55vw"
+              width={560}
+              height={373}
+              sizes="(max-width: 768px) 100vw, 560px"
               loading="lazy"
               className="w-full rounded-xl object-cover shadow-md"
             />
