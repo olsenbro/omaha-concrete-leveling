@@ -17,6 +17,77 @@ export function getBlogPath(slug: string): string {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "concrete-repair-omaha",
+    title: "Concrete Repair in Omaha: Should You Lift It, Patch It, or Replace It?",
+    description:
+      "A straight guide to concrete repair in Omaha, NE — how to tell whether a sunken or cracked slab can be lifted, when patching is enough, and when replacement is the honest answer.",
+    publishedDate: "2026-09-21",
+    sections: [
+      {
+        paragraphs: [
+          "Most concrete repair questions in Omaha come down to one decision: can this slab be saved, or is it past saving? That single question decides whether you are looking at a few hours of work or a multi-day tear-out, and homeowners are often quoted both for the same driveway.",
+          "This guide is written to help you tell the difference before anyone gives you a number. Omaha Mudjacking Pros connects homeowners across Douglas County, Sarpy County, and Council Bluffs with local contractors — and the honest answer is sometimes that lifting is not the right call. Knowing which situation you are in is what stops you overpaying.",
+        ],
+      },
+      {
+        heading: "First: Is the Slab Sunken, or Is It Broken?",
+        paragraphs: [
+          "This is the distinction that matters most, and it is easy to check yourself. A sunken slab has dropped as a unit — the concrete itself is still sound, but the soil beneath it compacted or washed out, leaving a void. You will usually see a clean height difference at a joint, a driveway that dips where it meets the garage, or a patio that has tilted back toward the house. Run your eye along the surface: if the panel is intact and simply sitting too low, it is a candidate for lifting.",
+          "A broken slab is a different problem. Wide cracks with crumbling edges, spalling where the surface flakes away, exposed aggregate, rebar showing through, or a panel fractured into several pieces that move independently — these are signs the concrete has lost structural integrity. Lifting a slab that is already failing will not repair it, and a contractor who offers to is not doing you a favour.",
+          "Plenty of Omaha driveways show both at once: a sound panel that has settled next to a panel that is genuinely shot. A good assessment treats them separately rather than pricing the whole driveway as one job.",
+        ],
+      },
+      {
+        heading: "When Lifting Is the Right Repair",
+        paragraphs: [
+          "Concrete leveling — whether mudjacking or polyurethane foam — works when the slab is structurally sound and the problem is underneath it. The contractor drills small holes, fills the void beneath, and raises the concrete back to grade. Because the original slab stays in place, it is dramatically faster than replacement and the surface is usually usable the same day or the next.",
+          "Good candidates in this market are settled driveway aprons, sidewalk panels that have created a trip hedge, patios draining the wrong way, garage floors that have dropped at one corner, and pool decks. These are the everyday jobs, and they are common in Omaha for a specific reason covered below.",
+          "Lifting also preserves something replacement cannot: a matched surface. A newly poured panel will not match twenty-year-old concrete in colour or texture, and that difference does not fade.",
+        ],
+      },
+      {
+        heading: "When Replacement Is the Honest Answer",
+        paragraphs: [
+          "Replacement is the right call when the concrete has failed rather than simply moved. If a panel is broken into multiple independently-moving pieces, if the surface has spalled deeply enough to expose aggregate across a wide area, if rebar is visible and rusting, or if the slab was poured too thin for what it is now carrying, lifting it will only relocate the problem.",
+          "Severe or accelerating cracking matters too. Hairline surface cracks are normal in Nebraska concrete and are not a reason to replace anything. Cracks you can fit a finger into, that have displaced vertically, or that have visibly widened over a season are telling you something structural is happening underneath.",
+          "There is also a judgement call about age and remaining life. Lifting concrete that is close to the end of its service life can be good value if it buys you several more years — or false economy if the slab fails anyway the following winter. A contractor willing to say \"this one is not worth lifting\" is worth listening to.",
+        ],
+      },
+      {
+        heading: "When Patching or Sealing Is Enough",
+        paragraphs: [
+          "Not every concrete problem needs lifting or replacing. Narrow cracks in an otherwise level, sound slab are usually a maintenance job: clean them out, fill them with a flexible sealant, and keep water from getting underneath. In Omaha that matters more than it sounds, because water in a crack is the beginning of the next problem.",
+          "Joint sealing falls into the same category. The joints between panels are designed to move, and when the sealant in them fails, meltwater runs straight into the soil beneath your slab — which is exactly how a sound driveway becomes a sunken one. Resealing joints is inexpensive and prevents a much larger job later.",
+          "If someone quotes you a full replacement for what is visibly a sealing job, get a second opinion.",
+        ],
+      },
+      {
+        heading: "Why Omaha Concrete Sinks in the First Place",
+        paragraphs: [
+          "Eastern Nebraska sits on deep wind-deposited loess soil. Loess drains well but is prone to consolidating when it gets saturated and then dries — it loses volume, and whatever is sitting on top of it drops. That is the single most common reason for settled concrete across the metro, and it is why lifting is so often the correct repair here: the concrete is fine, the ground moved.",
+          "Freeze-thaw cycling compounds it. Omaha crosses the freezing point repeatedly through winter rather than staying frozen, and each cycle works water into cracks and joints, expands it, and opens the gap slightly further. Surface damage in this market is usually a story about water and temperature rather than about bad concrete.",
+          "Drainage is the third factor and the one homeowners can actually control. Downspouts discharging next to a slab, negative grade running back toward the house, and failed joint sealant all concentrate water exactly where it does the most harm. Fixing the drainage is what stops the same slab settling again after it has been lifted.",
+        ],
+      },
+      {
+        heading: "What Actually Drives the Price of a Repair",
+        paragraphs: [
+          "Rather than quote a figure that cannot account for your slab, here is what a contractor is actually pricing. The size of the area being lifted is the starting point, measured in square footage. How far the slab needs to rise matters — a half-inch correction and a four-inch correction are not the same job. Access matters: a back patio reached through a narrow gate takes longer than a driveway a truck can park on.",
+          "Method affects price too. Polyurethane foam typically costs more per square foot than traditional mudjacking but cures in minutes and weighs far less, which matters on weaker soils. The honest comparison between the two is covered in our mudjacking versus polyjacking guide.",
+          "Finally, the condition of the slab changes the scope. If joints need resealing or cracks need filling as part of the work, that is additional. Any quote worth comparing should break these out as line items rather than giving you a single number — that is what lets you put two bids side by side and see what is actually different about them.",
+        ],
+      },
+      {
+        heading: "Getting a Straight Assessment",
+        paragraphs: [
+          "Ask the contractor to tell you which category your slab falls into and why — lift, patch, or replace — before any price is discussed. Ask them to point at what they are seeing. A settled-but-sound panel and a failing one look different, and someone who works on Omaha concrete every day can show you the difference in about a minute.",
+          "Ask what happens if the void is larger than expected once they start, and how that is priced. Ask whether drainage is contributing, and what they would do about it — because lifting a slab without addressing the water that undermined it is a repair with a short shelf life.",
+          "If you want a second opinion on a quote you already hold, that is a reasonable thing to ask for, and a good contractor will not be offended by it.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "mudjacking-vs-polyjacking-omaha",
     title: "Mudjacking vs. Polyjacking in Omaha: Which Method Is Right for Your Project?",
     description:

@@ -92,7 +92,7 @@ export default function HomePage() {
                 Omaha&apos;s Concrete Leveling Specialists
               </p>
               <h1 className="font-display text-4xl font-extrabold leading-tight text-balance text-white sm:text-5xl lg:text-[3.25rem]">
-                Sunken Concrete? We&apos;ll Lift It — Without the Mess or the Cost of Replacement
+                Mudjacking &amp; Concrete Leveling in Omaha, NE
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90">
                 Driveways, sidewalks, patios, and garage floors leveled in hours — not days. Save up
