@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { CityPageTemplate } from "@/components/areas/CityPageTemplate";
 import { cityAreas, getCityBySlug } from "@/lib/areas-served";
 import { getKeywordsForPage } from "@/lib/keyword-targets";
@@ -26,7 +27,7 @@ export function generateMetadata({ params }: CityPageProps): Metadata {
 
 export default function CityAreaPage({ params }: CityPageProps) {
   const city = getCityBySlug(params.city);
-  if (!city) return null;
+  if (!city) notFound();
 
   return <CityPageTemplate city={city} />;
 }
