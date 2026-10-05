@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Check, Layers, Phone, Shovel, Star } from "lucide-react";
+import { ArrowRight, Check, Layers, Phone, Shovel } from "lucide-react";
 import { BeforeAfterGraphic } from "@/components/home/BeforeAfterGraphic";
 import { BlogSection } from "@/components/home/BlogSection";
 import { ConcreteTextureOverlay } from "@/components/home/ConcreteTextureOverlay";
@@ -34,27 +34,6 @@ const problemCards = [
     emoji: "🏠",
     title: "Settling Patio or Pool Deck",
     body: "Gaps, cracks, and tilting slabs get worse every freeze-thaw cycle. Early leveling prevents full replacement.",
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      "Our driveway had a 3-inch drop at the garage entrance. I figured we were looking at $8,000 for new concrete. These guys lifted it in 90 minutes for a fraction of that. Incredible.",
-    name: "Mike D.",
-    area: "Elkhorn",
-  },
-  {
-    quote:
-      "The city sidewalk crew marked our panel as a trip hazard. We had 30 days to fix it. Called Omaha Mudjacking Pros on Monday, they were here Wednesday. Done before lunch.",
-    name: "Sarah K.",
-    area: "Papillion",
-  },
-  {
-    quote:
-      "Skeptical at first — didn't believe a little pump could lift my whole patio. Then I watched them do it. Six slabs, two hours, looks brand new. Should have done this 5 years ago.",
-    name: "Dave R.",
-    area: "Millard",
   },
 ];
 
@@ -238,34 +217,6 @@ export default function HomePage() {
       </section>
 
       <TeamSection />
-
-      {/* ── SOCIAL PROOF ── */}
-      <section className="bg-white section-padding">
-        <div className="container-narrow">
-          <h2 className="text-center font-display text-3xl font-bold sm:text-4xl">
-            What Omaha Homeowners Are Saying About Local Concrete Leveling
-          </h2>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {testimonials.map(({ quote, name, area }) => (
-              <blockquote
-                key={name}
-                className="flex flex-col rounded-xl border border-primary/10 bg-neutral p-6 shadow-sm"
-              >
-                <div className="flex gap-0.5 text-accent" aria-label="5 out of 5 stars">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-accent text-accent" aria-hidden="true" />
-                  ))}
-                </div>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-dark">&ldquo;{quote}&rdquo;</p>
-                <footer className="mt-4 text-sm font-semibold text-primary">
-                  — {name}, {area}
-                </footer>
-              </blockquote>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── SERVICE AREA ── */}
       <section className="bg-primary/5 section-padding">

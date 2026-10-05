@@ -1,4 +1,4 @@
-import { Check, Clock, Mail, MapPin, Phone, Star } from "lucide-react";
+import { Check, Clock, Mail, MapPin, Phone } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { PhoneLink } from "@/components/PhoneLink";
@@ -21,24 +21,6 @@ const trustPoints = [
   "No obligation",
   "Same-week scheduling",
   "5-year warranty on all work",
-];
-
-const testimonials = [
-  {
-    quote:
-      "Called on Monday, they were at my house Wednesday. Driveway lifted in 90 minutes — couldn't believe how fast.",
-    name: "Mike D., Elkhorn",
-  },
-  {
-    quote:
-      "Honest quote, no upselling. They told me exactly what I needed and what it would cost before they started.",
-    name: "Sarah K., Papillion",
-  },
-  {
-    quote:
-      "Saved us thousands vs. what the replacement contractor quoted. Patio looks brand new.",
-    name: "Dave R., Millard",
-  },
 ];
 
 const pageSchema = getWebPageSchema(
@@ -126,24 +108,6 @@ export default function ContactPage() {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            {/* Testimonials */}
-            <div className="space-y-4">
-              {testimonials.map(({ quote, name }) => (
-                <blockquote
-                  key={name}
-                  className="rounded-xl border border-primary/10 bg-white p-5 shadow-sm"
-                >
-                  <div className="flex gap-0.5 text-accent" aria-hidden="true">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="h-3.5 w-3.5 fill-accent text-accent" />
-                    ))}
-                  </div>
-                  <p className="mt-2 text-sm leading-relaxed text-dark">&ldquo;{quote}&rdquo;</p>
-                  <footer className="mt-2 text-xs font-semibold text-primary">— {name}</footer>
-                </blockquote>
-              ))}
             </div>
           </div>
         </div>
