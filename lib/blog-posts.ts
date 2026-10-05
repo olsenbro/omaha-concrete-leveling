@@ -17,6 +17,74 @@ export function getBlogPath(slug: string): string {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "omaha-sidewalk-repair-notice",
+    title: "Got a Sidewalk Repair Notice From the City of Omaha? Your Deadline and Your Options",
+    description:
+      "What an Omaha sidewalk repair letter means, how long you have under the city code, what counts as a defective sidewalk, your two repair options, and when leveling a sunken panel may be all you need.",
+    publishedDate: "2026-10-05",
+    sections: [
+      {
+        paragraphs: [
+          "Every year, Omaha homeowners open a certified letter from the City telling them a sidewalk next to their property is unsafe and has to be fixed — at their expense. It is usually a surprise, the deadline is short, and the letter does not explain your choices in plain terms.",
+          "This guide walks through what the notice means, how long you actually have, what makes a sidewalk \"defective\" in the City's eyes, and the two ways to get it fixed. Everything here comes from the City of Omaha Public Works sidewalk page and the Omaha Municipal Code. Where something depends on your specific notice, we say so — call the City to confirm before you commit to a repair.",
+        ],
+      },
+      {
+        heading: "Why You Got the Notice",
+        paragraphs: [
+          "The Omaha Municipal Code makes property owners responsible for repairing unsafe sidewalks next to their property (Sections 26-41 through 26-44), and for deteriorated driveway approaches that can damage city streets (Section 34-107). It does not matter whether you caused the damage.",
+          "City inspectors generally respond to complaints rather than surveying every street, so a notice usually means someone reported the panels near you. In a March 2026 WOWT story, the City explained that's how residents behind a fence in northwest Omaha received notices for a little-used stretch of sidewalk.",
+          "The code also puts liability on the owner: under Section 26-43, owners who fail to keep the adjacent sidewalk in repair are liable for injuries caused by its dangerous condition. That's the main reason not to ignore the letter.",
+        ],
+      },
+      {
+        heading: "How Long You Have",
+        paragraphs: [
+          "Omaha Municipal Code Section 26-42 gives property owners 20 days after notice to make the repair. The notice is sent by certified or registered mail to the owner's last known address. Check your letter for the exact dates it gives you.",
+          "If you miss the certified letter, the Postal Service makes two delivery attempts and leaves a peach-colored Form 3849 card in your mailbox. If the letter goes unclaimed, it is returned to the City and the repair is scheduled anyway. Not picking up the letter does not stop the process.",
+          "If you need more time, the City will consider an extension when you hire a contractor. You'll need to give them a copy of the contract showing the contractor's guaranteed completion date.",
+        ],
+      },
+      {
+        heading: "What Counts as a Defective Sidewalk",
+        paragraphs: [
+          "The City's published criteria say a sidewalk panel is defective if it has one or more of these: it is faulted at a joint or crack with 1 inch or more of height difference; it is raised more than 2 inches in 8 feet from the normal line of the sidewalk; it is sunken more than 2 inches in 8 feet; it is cracked into 3 or more pieces, or has any single crack 1/2 inch or wider; or it is cracked or spalled with pieces missing, leaving holes deeper than 3/8 inch.",
+          "Inspectors can also flag other unsafe conditions they judge to be hazards, such as severe scaling or wide horizontal cracks. The City notes that caulked cracks must be level to pass inspection, and that grinding the concrete is acceptable if the finished work passes inspection.",
+        ],
+      },
+      {
+        heading: "Your Two Options",
+        paragraphs: [
+          "Option 1: hire your own contractor or do the repair yourself. Call Omaha Public Works at (402) 444-5283 with your full name, the property address, and whether you or a contractor will do the work. The repair has to meet the City's Standard Plates and Specifications — that's the document that came with your notice. If the repair involves pouring new concrete, you must call (402) 444-5280 to schedule an inspection after the forms are set and before the concrete is poured.",
+          "Option 2: do nothing and let the City's contractor make the repair. You'll later get a Statement of Account and have 30 days from the billing date to pay. Anything unpaid after that is added to your property as a special assessment. The City's price is set each year when it awards the contract to the lowest qualified bidder, so it changes from year to year. In the WOWT story, homeowners reported projected bills of roughly $800 and $1,700.",
+          "Important: if the repair isn't done, or an extension isn't granted, before the City's contractor arrives, the City's contractor will do the work.",
+        ],
+      },
+      {
+        heading: "When Leveling a Sunken Panel May Be Enough",
+        paragraphs: [
+          "Look closely at why your panels were flagged. Two of the City's criteria — a joint faulted 1 inch or more, and a panel sunken more than 2 inches in 8 feet — often describe a panel that is still in one piece but has settled. Omaha's loess soil and freeze-thaw cycles make that very common. A settled panel can often be raised back level with mudjacking or polyurethane foam in a few hours, without tearing it out.",
+          "Panels that are broken into three or more pieces, have wide cracks, or are missing chunks usually need replacing. Lifting a broken panel won't make it pass.",
+          "Before you choose leveling, call Public Works at (402) 444-5283 and confirm that leveling the flagged panels will satisfy your notice and whether they need to inspect it. The City's guidance is written mostly around replacement pours, so get a clear answer for your address first. A local contractor who does this work regularly can also tell you which of your flagged panels are lift candidates and which are not.",
+        ],
+      },
+      {
+        heading: "If Someone Else Damaged the Sidewalk",
+        paragraphs: [
+          "If utility, fiber, or construction crews damaged the panels, the City told WOWT that property owners should file a claim with the company that caused the damage. The repair notice still applies to you, so keep your deadline in mind while the claim is pending.",
+          "If you live in an HOA, check whether the sidewalk sits next to your lot or a common area. The City says it isn't involved in agreements between homeowners and their association, so sort that out with your HOA quickly — the 20-day clock doesn't wait.",
+        ],
+      },
+      {
+        heading: "A Quick Checklist",
+        paragraphs: [
+          "1. Find the dates on your letter and count your days. 2. Look at each flagged panel: settled but intact, or broken? 3. Decide: your own contractor, or the City's contractor. 4. If you're using your own contractor, call (402) 444-5283 to tell the City, and ask about an extension if you need one. 5. If you want to level instead of replace, confirm with the City that it will satisfy the notice. 6. Get the work done before the City's contractor is scheduled to arrive.",
+          "Omaha Mudjacking Pros is a free referral service that connects Omaha-area homeowners with local concrete leveling contractors. If you've received a notice and want someone to look at whether your panels can be lifted, request a free estimate and mention your deadline.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "concrete-repair-omaha",
     title: "Concrete Repair in Omaha: Should You Lift It, Patch It, or Replace It?",
     description:

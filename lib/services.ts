@@ -373,7 +373,7 @@ export const coreServices: CoreService[] = [
       {
         question: "What if the city marked my sidewalk as a trip hazard?",
         answer:
-          "Omaha and surrounding municipalities periodically inspect sidewalks and notify property owners of defects that must be corrected within a specified timeframe — often 30 days. We regularly help homeowners meet these deadlines. Most sidewalk leveling jobs are completed in a single morning.",
+          "When the City of Omaha finds a defective sidewalk, it notifies the property owner by certified letter, and the owner has 20 days under the city code to make the repair. A settled panel can often be leveled in a single morning, well inside that window.",
       },
       {
         question: "How much does sidewalk leveling cost?",
@@ -406,8 +406,8 @@ export const coreServices: CoreService[] = [
         title: "Omaha Sidewalk Compliance & City Inspections",
         className: "bg-neutral",
         paragraphs: [
-          "The City of Omaha and surrounding communities — including Papillion, Bellevue, La Vista, and Ralston — conduct periodic sidewalk inspections, particularly in older neighborhoods and commercial districts. When a trip hazard is identified, property owners receive a notice requiring correction within a set period, typically 30 days.",
-          "Local contractors work with Omaha homeowners who receive these notices regularly. The leveling process eliminates the trip edge without the cost and disruption of panel replacement. Most jobs are completed in 1–3 hours, well within municipal deadlines. If you've received a city notice, call us — we can usually connect you with a pro within the same week.",
+          "In Omaha, property owners are responsible for repairing unsafe sidewalks next to their property. When the City finds a defective panel — for example, a joint faulted 1 inch or more, or a panel sunken more than 2 inches in 8 feet — it sends the owner a certified letter. Under Omaha Municipal Code Section 26-42, owners have 20 days after notice to make the repair, or the City's contractor will do it and bill them. Surrounding cities such as Papillion, Bellevue, and La Vista have their own rules, so check your own notice.",
+          "If the flagged panel has settled but is still in one piece, leveling can often fix the trip edge in a few hours without replacing the panel. Confirm with Omaha Public Works at (402) 444-5283 that leveling will satisfy your notice before the work is done. Read our guide to Omaha sidewalk repair notices for the full process, or call us to get connected with a local pro quickly.",
         ],
       },
       {
